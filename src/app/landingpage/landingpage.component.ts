@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import { faWallet } from '@fortawesome/free-solid-svg-icons';
@@ -15,5 +15,13 @@ export class LandingpageComponent {
   faRocket = faRocket
   faWallet = faWallet
   faCircleCheck = faCircleCheck
+
+  isScrolled = false;
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    // Update scrolled state based on scroll position
+    this.isScrolled = window.scrollY > 50; // Change threshold as needed
+  }
 
 }
