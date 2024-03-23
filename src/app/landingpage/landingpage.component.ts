@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import { faWallet } from '@fortawesome/free-solid-svg-icons';
+import {faCircleCheck} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-landingpage',
@@ -13,5 +14,6 @@ import { faWallet } from '@fortawesome/free-solid-svg-icons';
 export class LandingpageComponent {
   faRocket = faRocket
   faWallet = faWallet
+  faCircleCheck = faCircleCheck
 
 }
