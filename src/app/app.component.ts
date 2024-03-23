@@ -17,4 +17,15 @@ export class AppComponent {
   data={
     courseTitle :'Javellin website'
   }
+
+  onClickAlert(){
+
+    alert("Hello World!!!")
+  }
+
+  onKeyUp(inputTItle: string ){
+
+    this.data.courseTitle=inputTItle;
+
+  }
 }
