@@ -1,0 +1,334 @@
+<header class="-mb-28 h-24 px-16 fixed top-0 w-full z-10 {{ isScrolled ? 'bg-primary text-white' : '' }}">
+    <nav class="nav flex flex-wrap items-center justify-between ">
+        <div class="flex flex-no-shrink py-3 pt-6 -ml-6">
+            <img class="h-20" src="assets/images/logo-1.png" alt="">
+        </div>
+
+        <input class="menu-btn hidden" type="checkbox" id="menu-btn">
+        <label class="menu-icon block cursor-pointer md:hidden px-2 py-4 relative select-none" for="menu-btn">
+            <span class="navicon bg-grey-darkest flex items-center relative"></span>
+        </label>
+
+        <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
+            <li class="border-t md:border-none">
+                <a href="/"
+                    class="block md:inline-block px-4 py-3 no-underline text-primary hover:text-secondary active:text-secondary active:font-bold font-bold">Home</a>
+            </li>
+
+            <li class="border-t md:border-none">
+                <a href="/about/"
+                    class="block md:inline-block px-4 py-3 no-underline text-primary hover:text-secondary active:text-secondary active:font-bold">Features</a>
+            </li>
+
+            <li class="border-t md:border-none">
+                <a href="/blog/"
+                    class="block md:inline-block px-4 py-3 no-underline text-primary hover:text-secondary active:text-secondary active:font-bold">Pricing</a>
+            </li>
+            <li class="border-t md:border-none">
+                <a href="/blog/"
+                    class="block md:inline-block px-4 py-3 no-underline text-primary hover:text-secondary active:text-secondary active:font-bold">Testimonials</a>
+            </li>
+            <li class="my-2 md:border-none">
+                <button class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold"><a [routerLink]="['dashboard']">Get Started</a></button>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+<div class="px-36">
+    <section id="hero-section" class="flex h-screen items-center">
+        <div class="basis-1/2 flex flex-col mt-10">
+            <h1 class="text-5xl font-bold text-primary">Drowning in legal research?</h1>
+            <p class="py-4 mr-10">
+                LegalLens is your lifeboat! Legal Lens
+                cuts through the noise, empowering you
+                with the information you need quickly
+                and accurately.
+            </p>
+            <div class="grid justify-start py-4">
+                <button  class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold"><a [routerLink]="['dashboard']">Get Started</a></button>
+            </div>
+        </div>
+        <div class="basis-1/2">
+            <img src="assets/images/hero-section-img.png" alt="vector image of a gavel">
+        </div>
+    </section>
+    <section class="flex flex-col h-screen items-center ">
+        <div>
+            <h2 class="text-center text-3xl mb-4 text-secondary font-semibold">Why us</h2>
+            <div class="border-b-4 rounded-full border-primary w-16 mx-auto"></div>
+            <p class="py-10 mx-32 text-gray-400 text-center">
+                Our AI-powered platform streamlines your
+                research process, helping you identify
+                relevant legal precedents and gain
+                valuable insights.
+            </p>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mx-auto p-10">
+            <div class="p-8 h-64 w-72 shadow-lg rounded-3xl">
+                <div class="mx-auto flex items-center justify-center">
+                    <svg class="m-4" width="48" height="48" viewBox="0 0 92 90" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M56.2153 43.3151L47.1374 51.9802L8.80308 88.5661C7.79669 89.5289 6.50566 90.0103 5.21463 90.0103C3.80162 90.0103 2.38861 89.4367 1.36188 88.2998C-0.661062 86.0669 -0.396757 82.5743 1.93116 80.6692L47.1374 43.8272L52.1185 39.7712L56.2153 43.3151Z"
+                            fill="#0E294C" />
+                        <path d="M46.7414 52.4206L37.8058 60.9423L36.9824 52.185L41.8721 48.2007L46.7414 52.4206Z"
+                            fill="#0E294C" />
+                        <path
+                            d="M91.9782 29.9078C91.9782 46.4288 78.6817 59.8259 62.2948 59.8259C51.9666 59.8259 42.8684 54.5101 37.5518 46.4391C34.431 41.7071 32.6113 36.0225 32.6113 29.9078C32.6113 13.3868 45.9079 0 62.2948 0C69.6953 0 76.4554 2.72448 81.65 7.23114C87.973 12.7211 91.9782 20.8433 91.9782 29.9078Z"
+                            fill="#0E294C" />
+                        <path
+                            d="M62.2946 53.2093C75.0671 53.2093 85.4213 42.7768 85.4213 29.9078C85.4213 17.0387 75.0671 6.60632 62.2946 6.60632C49.5221 6.60632 39.168 17.0387 39.168 29.9078C39.168 42.7768 49.5221 53.2093 62.2946 53.2093Z"
+                            fill="white" />
+                        <path opacity="0.06"
+                            d="M91.9772 29.9078C91.9772 46.4288 78.6806 59.8259 62.2938 59.8259C51.9655 59.8259 42.8674 54.5101 37.5508 46.4391C71.026 43.6941 79.8497 15.1178 81.6592 7.23114C87.972 12.7211 91.9772 20.8433 91.9772 29.9078Z"
+                            fill="#0E294C" fill-opacity="0.5" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="font-semibold text-black my-2">Faster and More Precise Findings</h3>
+                    <p class="text-gray-400 text-sm">
+                        Find relevant legal information quickly and
+                        avoid getting bogged down in irrelevant results.
+                    </p>
+                </div>
+            </div>
+            <div class="p-8 h-64 w-72 shadow-lg rounded-3xl">
+                <div class="mx-auto flex items-center justify-center">
+                    <svg class="m-4" width="48" height="48" viewBox="0 0 83 76" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_468_907)">
+                            <path
+                                d="M65.4593 0H17.5407C7.85322 0 0 7.19086 0 16.0613V59.9386C0 68.809 7.85322 76.0001 17.5407 76.0001H65.4593C75.1468 76.0001 83 68.809 83 59.9386V16.0613C83 7.19086 75.1468 0 65.4593 0Z"
+                                fill="#0E294C" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.8173 10.8119C16.5559 10.8157 16.3069 10.9143 16.1246 11.0859C15.9424 11.2575 15.8418 11.4882 15.845 11.7276V60.3495C15.7979 60.5086 15.7991 60.6765 15.8486 60.835C15.898 60.9935 15.9938 61.1364 16.1256 61.2487C16.2481 61.3643 16.402 61.4481 16.5716 61.491C16.7411 61.534 16.9201 61.5346 17.09 61.493H70.1903C70.4523 61.493 70.7036 61.3979 70.8889 61.2282C71.0742 61.0585 71.1783 60.8282 71.1783 60.5883C71.1783 60.3483 71.0742 60.1182 70.8889 59.9486C70.7036 59.7789 70.4523 59.6835 70.1903 59.6835H17.8212V11.7276C17.8228 11.6066 17.7979 11.4866 17.748 11.3746C17.698 11.2626 17.6241 11.1609 17.5305 11.0755C17.4369 10.9902 17.3256 10.9229 17.2031 10.8776C17.0806 10.8323 16.9494 10.8099 16.8173 10.8119ZM68.2279 21.7161C66.6035 21.7161 65.2636 22.9411 65.2636 24.4304C65.2636 24.8954 65.4079 25.328 65.6391 25.7134L51.5785 40.0195C51.1958 39.8726 50.7833 39.8023 50.3685 39.8132C49.9537 39.8241 49.5463 39.9159 49.1735 40.0827L43.2251 34.6362C43.4109 34.2834 43.5255 33.8943 43.5255 33.4781C43.5255 31.9889 42.1876 30.7638 40.5612 30.7638C38.9368 30.7638 37.5969 31.9889 37.5969 33.4781C37.5969 33.8382 37.6799 34.1802 37.8222 34.4951L24.1964 45.5892C23.7632 45.3634 23.274 45.2432 22.7755 45.24C21.1511 45.24 19.8112 46.465 19.8112 47.9543C19.8112 49.4417 21.1511 50.6686 22.7755 50.6686C24.4019 50.6686 25.7398 49.4417 25.7398 47.9543C25.7387 47.6046 25.6629 47.2585 25.5165 46.9355L39.1463 35.8432C39.5692 36.0567 40.0474 36.1924 40.5612 36.1924C41.0158 36.1924 41.4426 36.0873 41.828 35.9154L47.7803 41.3658C47.5856 41.7261 47.4822 42.122 47.4779 42.5239C47.4779 44.0132 48.8178 45.2382 50.4422 45.2382C52.0686 45.2382 53.4065 44.0132 53.4065 42.5239C53.4065 42.0589 53.2622 41.6245 53.031 41.239L67.0975 26.9329C67.4473 27.0668 67.8287 27.1448 68.2279 27.1448C69.8543 27.1448 71.1922 25.9178 71.1922 24.4304C71.1922 22.9411 69.8543 21.7161 68.2279 21.7161ZM68.2279 23.5256C68.7852 23.5256 69.216 23.9201 69.216 24.4304C69.216 24.9406 68.7852 25.3352 68.2279 25.3352C68.0976 25.3369 67.9683 25.3147 67.8476 25.2699C67.7269 25.225 67.6172 25.1583 67.5251 25.0739C67.4329 24.9896 67.3602 24.8891 67.3112 24.7786C67.2622 24.6681 67.2379 24.5496 67.2398 24.4304C67.2398 23.9201 67.6706 23.5256 68.2279 23.5256ZM40.5612 32.5733C41.1185 32.5733 41.5493 32.9678 41.5493 33.4781C41.5493 33.9884 41.1185 34.3829 40.5612 34.3829C40.3195 34.3814 40.087 34.2975 39.9091 34.1476C39.8747 34.1054 39.8363 34.066 39.7945 34.0299C39.6762 33.8986 39.6015 33.7391 39.5792 33.5702C39.5569 33.4013 39.588 33.2302 39.6687 33.077C39.7493 32.9237 39.8763 32.7947 40.0345 32.7054C40.1926 32.6162 40.3755 32.5704 40.5612 32.5733ZM50.4422 41.6209C50.9995 41.6209 51.4303 42.0154 51.4303 42.5257C51.4303 43.036 50.9995 43.4305 50.4422 43.4305C50.3119 43.4322 50.1826 43.41 50.0619 43.3651C49.9411 43.3202 49.8315 43.2535 49.7393 43.1692C49.6472 43.0848 49.5745 42.9844 49.5255 42.8738C49.4765 42.7633 49.4522 42.645 49.4541 42.5257C49.4541 42.0154 49.8849 41.6209 50.4422 41.6209ZM22.7755 47.0495C23.0542 47.0495 23.3012 47.1454 23.479 47.3064C23.6569 47.4693 23.7636 47.6991 23.7636 47.9543C23.7636 48.4646 23.3328 48.859 22.7755 48.859C22.6452 48.8608 22.5159 48.8385 22.3952 48.7937C22.2745 48.7488 22.1648 48.6821 22.0727 48.5977C21.9805 48.5134 21.9078 48.4129 21.8588 48.3024C21.8098 48.1919 21.7856 48.0736 21.7874 47.9543C21.7874 47.444 22.2182 47.0495 22.7755 47.0495Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_468_907">
+                                <rect width="83" height="76" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="font-semibold text-black my-2">Improved Case Law Analysis</h3>
+                    <p class="text-gray-400 text-sm">
+                        Identify critical legal points by
+                        leveraging on the power of streamlined legal analysis
+                    </p>
+                </div>
+            </div>
+            <div class="p-8 h-64 w-72 shadow-lg rounded-3xl">
+                <div class="mx-auto flex items-center justify-center">
+                    <svg class="m-4" width="48" height="48" viewBox="0 0 85 83" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M42.5 0C34.0943 0 25.8774 2.43393 18.8883 6.99401C11.8992 11.5541 6.45186 18.0355 3.23514 25.6186C0.0184145 33.2018 -0.823227 41.546 0.816645 49.5962C2.45652 57.6464 6.50425 65.041 12.448 70.8449C18.3917 76.6488 25.9645 80.6013 34.2087 82.2026C42.4529 83.8039 50.9982 82.982 58.7641 79.841C66.5299 76.6999 73.1675 71.3808 77.8375 64.5562C82.5074 57.7315 85 49.7079 85 41.5C85 30.4935 80.5223 19.9378 72.552 12.1551C64.5817 4.37231 53.7717 0 42.5 0ZM57.6786 44.4643H42.5C41.6949 44.4643 40.9227 44.152 40.3534 43.5961C39.7841 43.0401 39.4643 42.2862 39.4643 41.5V14.8214C39.4643 14.0352 39.7841 13.2813 40.3534 12.7254C40.9227 12.1694 41.6949 11.8571 42.5 11.8571C43.3051 11.8571 44.0773 12.1694 44.6466 12.7254C45.2159 13.2813 45.5357 14.0352 45.5357 14.8214V38.5357H57.6786C58.4837 38.5357 59.2558 38.848 59.8252 39.4039C60.3945 39.9598 60.7143 40.7138 60.7143 41.5C60.7143 42.2862 60.3945 43.0401 59.8252 43.5961C59.2558 44.152 58.4837 44.4643 57.6786 44.4643Z"
+                            fill="#0E294C" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="font-semibold text-black my-2">Boosted Efficiency</h3>
+                    <p class="text-gray-400 text-sm">
+                        Improve your productivity by spending less time
+                        on research and focus more on strategy and case
+                        development
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="border-2 border-primary text-primary rounded-full px-6 py-2 text-sm font-bold">Learn
+                More</button>
+        </div>
+    </section>
+    <section class="flex flex-col">
+        <div class="py-4">
+            <h2 class="text-center text-3xl mb-4 text-secondary font-semibold">What we are offering</h2>
+            <div class="border-b-4 rounded-full border-primary w-16 mx-auto"></div>
+        </div>
+        <div class="scale-90">
+            <div class="flex items-center justify-center">
+                <div class="basis-1/2">
+                    <img src="assets/images/seamless-research.png" alt="">
+                </div>
+                <div class="basis-1/2 px-16">
+                    <div class="py-4">
+                        <h3 class="text-2xl font-semibold py-4 text-primary">Seamless legal research</h3>
+                        <div class="border-b-4 rounded-full border-primary w-16"></div>
+                    </div>
+                    <p class="text-gray-500">
+                        Identify relevant case law based on your input and case facts.
+                        Automatically highlight key legal arguments within cases for faster analysis.
+                        Identify the current legal status of cases (overturned, affirmed, etc.).
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center">
+                <div class="basis-1/2 px-16">
+                    <div class="py-4">
+                        <h3 class="text-2xl font-semibold py-4 text-secondary">Case Summarization and comparison</h3>
+                        <div class="border-b-4 rounded-full border-primary w-16"></div>
+                    </div>
+                    <p class="text-gray-500">
+                        Automatically generate summaries of key points from legal precedents.
+                        Side-by-side comparison of legal precedents highlighting similarities and differences.
+                    </p>
+                </div>
+                <div class="basis-1/2">
+                    <img src="assets/images/case-comparison-img.png" alt="">
+                </div>
+            </div>
+            <div class="flex items-center justify-center">
+                <div class="basis-1/2">
+                    <img src="assets/images/seamless-research.png" alt="">
+                </div>
+                <div class="basis-1/2 px-16">
+                    <div class="py-4">
+                        <h3 class="text-2xl font-semibold py-4 text-primary">Predictive analytics for your arguments
+                        </h3>
+                        <div class="border-b-4 rounded-full border-primary w-16"></div>
+                    </div>
+                    <p class="text-gray-500">
+                        Analyze data to predict potential case outcomes (based on past rulings and similar cases).
+                        Analyze historical data to see how often specific arguments have been successful in court
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flex items-center justify-center my-5">
+        <div class="w-3/4 p-6 bg-primary text-white rounded-2xl">
+            <div class="py-4">
+                <h2 class="text-center text-2xl mb-4 font-semibold text-secondary">What our customers are saying</h2>
+                <div class="border-b-4 rounded-full w-16 mx-auto"></div>
+            </div>
+            <div>
+                <p>
+                    <q class="my-5 p-6 px-16 font-thin">
+                        <i>
+                            Legal Lens is like having a dedicated legal research assistant
+                            at your fingertips. The platform is incredibly powerful yet easy
+                            to use. The AI features are constantly learning and improving,
+                            providing me with the most relevant and up-to-date legal information.
+                            Legal Lens has become an indispensable part of my daily practice,
+                            allowing me to deliver exceptional results for my clients.
+                        </i>
+                    </q>
+                </p>
+                <div class="p-4">
+                    <p class="flex justify-end">
+                        ~ Naa Ododoo
+                        <!-- Adwa Mensah
+                        Afi Kwao -->
+                    </p>
+                    <p class="flex justify-end text-secondary">
+                        <i>Managing Partner at Chen & Associates</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-10 flex flex-col">
+        <div class="py-4">
+            <h2 class="text-center text-2xl mb-4 font-semibold text-secondary">Pricing plan</h2>
+            <div class="border-b-4 rounded-full w-16 mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-4 mx-auto">
+            <div class="bg-blue-50 px-8 py-10 rounded-xl">
+                <h3 class="text-2xl text-center text-primary py-5 font-semibold">free trial</h3>
+                <h1 class="text-4xl text-center text-secondary font-bold">7 days</h1>
+                <div class="py-5">
+                    <!-- <fa-icon [icon]="faCircleCheck"></fa-icon> -->
+                    <p class="text-center">
+                        Sign up with your (active) student id
+                    </p>
+                    <ul class="px-6 py-2">
+                        <li class="py-2"><fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
+                            Sign in/register
+                        </li>
+                        <li>
+                            <fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
+                            Upto 5 searches
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-blue-50 px-8 py-10 rounded-xl">
+                <h3 class="text-2xl text-center text-primary py-5 font-semibold">student plan</h3>
+                <h1 class="text-4xl text-center text-secondary font-bold">$7/month</h1>
+                <div class="py-5">
+                    <!-- <fa-icon [icon]="faCircleCheck"></fa-icon> -->
+                    <p class="text-center">
+                        Sign up with your (active) student id
+                    </p>
+                    <ul class="px-6 py-2">
+                        <li class="py-2"><fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
+                            Upto 3 logins
+                        </li>
+                        <li>
+                            <fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
+                            Unlimited searches
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-blue-50 px-8 py-10 rounded-xl">
+                <h3 class="text-2xl text-center text-primary py-5 font-semibold">proffessional plan</h3>
+                <h1 class="text-4xl text-center text-secondary font-bold">$10/month</h1>
+                <div class="py-5">
+                    <!-- <fa-icon [icon]="faCircleCheck"></fa-icon> -->
+                    <p class="text-center">
+                        Sign up with your personal or organizational id
+                    </p>
+                    <ul class="px-6 py-2">
+                        <li class="py-2"><fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
+                            Upto 3 logins
+                        </li>
+                        <li>
+                            <fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
+                            Unlimited searches
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center py-8">
+            <button class="border-2 border-primary text-primary rounded-full px-6 py-2 text-sm font-bold"><a [routerLink]="['dashboard']">Get Started</a></button>
+        </div>
+    </section>
+</div>
+<footer class="p-10 bg-secondary font-thin text-gray-100 text-sm">
+    <section class="grid grid-cols-3">
+        <div>
+            <img class="h-20" src="assets/images/LegalLens.png" alt="logo">
+            <p class="px-8">
+                Legal Lens cuts through the noise,
+                empowering you with the information
+                you need quickly and accurately.
+            </p>
+        </div>
+        <div class="flex flex-col">
+            <h3 class="flex justify-center font-semibold">Company</h3>
+            <div class="flex justify-center ml-8 p-4">
+                <ul>
+                    <li>About Us</li>
+                    <li>Pricing</li>
+                    <li>Features</li>
+                    <li><a [routerLink]="['dashboard']">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <h3 class="flex justify-center font-semibold">Help</h3>
+            <div class="flex justify-center ml-8 p-4">
+                <ul>
+                    <li>FAQs</li>
+                    <li>Pricing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</footer>
