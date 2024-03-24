@@ -29,7 +29,7 @@
                     class="block md:inline-block px-4 py-3 no-underline text-primary hover:text-secondary active:text-secondary active:font-bold">Testimonials</a>
             </li>
             <li class="my-2 md:border-none">
-                <button class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold">Get Started</button>
+                <button class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold"><a [routerLink]="['dashboard']">Get Started</a></button>
             </li>
 
         </ul>
@@ -46,7 +46,7 @@
                 and accurately.
             </p>
             <div class="grid justify-start py-4">
-                <button class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold">Get Started</button>
+                <button  class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold"><a [routerLink]="['dashboard']">Get Started</a></button>
             </div>
         </div>
         <div class="basis-1/2">
@@ -296,8 +296,7 @@
             </div>
         </div>
         <div class="flex items-center justify-center py-8">
-            <button class="border-2 border-primary text-primary rounded-full px-6 py-2 text-sm font-bold">Get
-                Started</button>
+            <button class="border-2 border-primary text-primary rounded-full px-6 py-2 text-sm font-bold"><a [routerLink]="['dashboard']">Get Started</a></button>
         </div>
     </section>
 </div>
@@ -318,7 +317,7 @@
                     <li>About Us</li>
                     <li>Pricing</li>
                     <li>Features</li>
-                    <li>Get Started</li>
+                    <li><a [routerLink]="['dashboard']">Get Started</a></li>
                 </ul>
             </div>
         </div>
