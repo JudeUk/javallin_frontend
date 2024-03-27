@@ -5,15 +5,15 @@
    <div class="parent">
         <div class="container">
 
-            <div class="buttons">+ Add facts of Case</div>
-            <div class="buttons">+ Add facts of Case</div>
-            <div class="buttons">+ Add facts of Case</div>
-            <div class="buttons">+ Add facts of Case</div>
+            <div class="buttons"><label for="file-upload" class="custom-file-upload">+ Upload facts of Case</label><input id="file-upload" type="file" style="display:none;" (change)="getFile($event)" /></div>
+            <div class="buttons">+ Add Issues</div>
+            <div class="buttons">+ Add Arguements</div>
+            <div class="buttons">+ Add reference Material</div>
             
             
            
         </div>
-        <button class="submit" ><a [routerLink]="['/insights']">Submit</a></button>
+        <button class="submit" (click)="uploadFile()" [routerLink]="['/insights']">Submit</button>
         </div>
 
 <!-- </html> -->
