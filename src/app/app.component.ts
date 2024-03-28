@@ -4,13 +4,14 @@ import { RouterOutlet } from '@angular/router';
 import { app } from '../../server';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InsightsComponent } from './insights/insights.component';
+import { LoginpageComponent } from "./loginpage/loginpage.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, DashboardComponent]
+    imports: [CommonModule, RouterOutlet, DashboardComponent, LoginpageComponent]
 })
 export class AppComponent {
 
