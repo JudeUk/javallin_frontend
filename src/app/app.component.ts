@@ -8,13 +8,14 @@ import { LoginpageComponent } from "./loginpage/loginpage.component";
 import { RegistrationpageComponent } from "./registrationpage/registrationpage.component";
 import { SidenavComponent } from "./sidenav/sidenav.component";
 import { UploadpageComponent } from "./uploadpage/uploadpage.component";
+import { LandingpageComponent } from "./landingpage/landingpage.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, DashboardComponent, LoginpageComponent, RegistrationpageComponent, SidenavComponent, UploadpageComponent]
+    imports: [CommonModule, RouterOutlet, DashboardComponent, LoginpageComponent, RegistrationpageComponent, SidenavComponent, UploadpageComponent, LandingpageComponent]
 })
 export class AppComponent {
 
