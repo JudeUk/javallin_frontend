@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { InsightsComponent } from '../insights/insights.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidenavComponent } from "../sidenav/sidenav.component";
+import { DataService } from "../data.service"
 
 @Component({
     selector: 'app-dashboard',
@@ -16,10 +17,16 @@ import { SidenavComponent } from "../sidenav/sidenav.component";
 
 export class DashboardComponent {
 
-  constructor(private http: HttpClient) {}
+
+  // casesWithSimilarFacts: number = 105;
+  // casesWithSimilarArguments: number = 50;
+  // casesWhereSucceeded: number = 10;
+
+
+  constructor(private http: HttpClient,private dataService: DataService) {}
   caseFile : any;
   formData = new FormData();
-getFile(event: any) {
+  getFile(event: any) {
 
 this.caseFile = event.target.files[0];
 
@@ -59,8 +66,15 @@ console.log('file has been uploaded>>>>>>>',this.caseFile)
     // const formData = new FormData();
     // formData.set('file', this.caseFile);
     
-    
-    return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {});
+    this.dataService.dataToPass = {
+      casesWithSimilarFacts: 105,
+      casesWithSimilarArguments: 50,
+      casesWhereSucceeded: 10
   }
+    return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {});
+
+ 
+
+}
 
 }
