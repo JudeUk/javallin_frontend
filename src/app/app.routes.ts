@@ -7,7 +7,7 @@ import { UploadpageComponent } from './uploadpage/uploadpage.component';
 
 
 export const routes: Routes = [
-    // {path: '', component: LandingpageComponent},
+    {path: '', component: LandingpageComponent},
     {path:'dashboard', component: DashboardComponent},
     { path: 'insights', component: InsightsComponent },
     { path: 'upload', component: UploadpageComponent },
