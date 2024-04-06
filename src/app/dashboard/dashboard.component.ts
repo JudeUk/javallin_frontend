@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { InsightsComponent } from '../insights/insights.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidenavComponent } from "../sidenav/sidenav.component";
+import { FilesService } from '../services/files.service';
 
 @Component({
     selector: 'app-dashboard',
@@ -16,21 +17,17 @@ import { SidenavComponent } from "../sidenav/sidenav.component";
 
 export class DashboardComponent {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private FilesService: FilesService) {}
   caseFile : any;
   formData = new FormData();
+
+  // getting the files
 getFile(event: any) {
-
-this.caseFile = event.target.files[0];
-
-console.log('file has been uploaded>>>>>>>',this.caseFile)
-
-  
-
+ this.caseFile = event.target.files[0];
+ console.log('file has been uploaded>>>>>>>',this.caseFile)
   // Extract button label for differentiation
   // const buttonLabel = event.target.parentElement.textContent.trim();
   const buttonLabel = event.target.parentElement.querySelector('label').textContent.trim();
-
   // Append selected file based on button label
   switch (buttonLabel) {
 
@@ -60,7 +57,7 @@ console.log('file has been uploaded>>>>>>>',this.caseFile)
     // formData.set('file', this.caseFile);
     
     
-    return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {});
+    return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {this.FilesService.setSimilarFiles(response.case_number)});
   }
 
 }
