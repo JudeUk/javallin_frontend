@@ -1,4 +1,5 @@
 <div class="flex">
+
     <!-- <app-sidenav></app-sidenav> -->
     <app-sidenav></app-sidenav>
     <div>
@@ -18,11 +19,14 @@
         <div class="insight-columns">
             <div class="insight-rows">
                 <div class="insight-card">
-                    <h1>{{ casesWithSimilarFacts }}</h1>
+                    <!-- <ul *ngFor = "let file of similarFiles">
+                        <li>{{file}}</li>
+                    </ul> -->
+                    <h1></h1>
                     <h5>CASES WITH SIMILAR FACTS</h5>
                 </div>
                 <div class="insight-card2">
-                    <h1>{{ casesWithSimilarArguments }}</h1>
+                    <h1>{{ casesWithSimilarFacts }}</h1>
                     <h5>CASES WITH SIMILAR ARGUMENTS USED</h5>
                 </div>
                 <div class="insight-card">
@@ -30,6 +34,7 @@
                     <h5>CASES WHERE IT SUCCEEDED</h5>
                 </div>
             </div>
+
         </div>
         <table>
             <tr>
