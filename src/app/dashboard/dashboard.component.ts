@@ -24,7 +24,6 @@ const backend_url_production = 'https://legal-legal-vkjha.ondigitalocean.app/upl
 
 export class DashboardComponent {
 
-
   // casesWithSimilarFacts: number = 105;
   // casesWithSimilarArguments: number = 50;
   // casesWhereSucceeded: number = 10;
@@ -37,12 +36,14 @@ export class DashboardComponent {
 
 this.caseFile = event.target.files[0];
 
-  
 
+  // getting the files
+getFile(event: any) {
+ this.caseFile = event.target.files[0];
+ console.log('file has been uploaded>>>>>>>',this.caseFile)
   // Extract button label for differentiation
   // const buttonLabel = event.target.parentElement.textContent.trim();
   const buttonLabel = event.target.parentElement.querySelector('label').textContent.trim();
-
   // Append selected file based on button label
   switch (buttonLabel) {
 
@@ -104,6 +105,5 @@ uploadFile() {
     }
   );
 }
-
 
 }
