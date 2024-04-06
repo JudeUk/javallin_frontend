@@ -57,7 +57,7 @@ getFile(event: any) {
     // formData.set('file', this.caseFile);
     
     
-    return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {this.FilesService.setSimilarFiles(response.case_number)});
+    // return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {this.FilesService.setSimilarFiles(response.case_number)});
   }
 
 }
