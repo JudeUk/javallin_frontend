@@ -4,7 +4,13 @@ import { RouterModule } from '@angular/router';
 import { InsightsComponent } from '../insights/insights.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidenavComponent } from "../sidenav/sidenav.component";
-import { FilesService } from '../services/files.service';
+import { DataService } from "../data.service"
+
+const backend_url_local = 'http://127.0.0.1:8000/upload/'
+
+const backend_url_production_old = 'https://legallens-backend-deployment.onrender.com/upload/'
+
+const backend_url_production = 'https://legal-legal-vkjha.ondigitalocean.app/upload/'
 
 @Component({
     selector: 'app-dashboard',
@@ -15,11 +21,21 @@ import { FilesService } from '../services/files.service';
 })
 
 
+
 export class DashboardComponent {
 
-  constructor(private http: HttpClient,private FilesService: FilesService) {}
+  // casesWithSimilarFacts: number = 105;
+  // casesWithSimilarArguments: number = 50;
+  // casesWhereSucceeded: number = 10;
+
+
+  constructor(private http: HttpClient,private dataService: DataService) {}
   caseFile : any;
   formData = new FormData();
+  getFile(event: any) {
+
+this.caseFile = event.target.files[0];
+
 
   // getting the files
 getFile(event: any) {
@@ -51,13 +67,43 @@ getFile(event: any) {
 
   
 
-  uploadFile() {
+//   uploadFile() {
 
-    // const formData = new FormData();
-    // formData.set('file', this.caseFile);
+//     // const formData = new FormData();
+//     // formData.set('file', this.caseFile);
     
-    
-    // return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {this.FilesService.setSimilarFiles(response.case_number)});
-  }
+//     this.dataService.dataToPass = {
+//       casesWithSimilarFacts: 105,
+//       casesWithSimilarArguments: 50,
+//       casesWhereSucceeded: 10
+//   }
+//     return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {});
+
+ 
+
+// }
+
+
+uploadFile() {
+  this.http.post<any>(backend_url_production, this.formData).subscribe(
+    (response) => {
+      // Update dataToPass variables with response data
+      console.log(">>>>>>>>>>>>>> this is the response from backend " + response.case_numbers + response.texts)
+
+      // this.dataService.dataToPass = {
+      //   casesWithSimilarFacts: response.case_numbers,
+      //   casesWithSimilarArguments: response.casesWithSimilarArguments,
+      //   casesWhereSucceeded: response.casesWhereSucceeded
+      // };
+
+      this.dataService.setSimilarFiles(response)
+
+    },
+    (error) => {
+      // Handle error if needed
+      console.error('Error occurred:', error);
+    }
+  );
+}
 
 }
