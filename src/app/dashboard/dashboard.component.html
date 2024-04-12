@@ -7,14 +7,14 @@
     <div class="parent">
         <div class="container">
 
-            <div class="buttons"><label for="file-upload" class="custom-file-upload">+ Upload facts of Case</label><input id="file-upload" type="file" style="display:none;" (change)="getFile($event)" /></div>
-            <div class="buttons"><label for="file-upload" class="custom-file-upload">+ Upload Case Issues</label><input id="file-upload" type="file" style="display:none;" (change)="getFile($event)" /></div>
-            <div class="buttons"><label for="file-upload" class="custom-file-upload">+ Upload Case Arguments</label><input id="file-upload" type="file" style="display:none;" (change)="getFile($event)" /></div>
+            <div class="buttons"><label for="file-upload" class="custom-file-upload">+ Upload facts of Case</label><input id="file-upload" type="file" style="display:none;" /></div>
+            <div class="buttons"><label for="file-upload" class="custom-file-upload">+ Upload Case Issues</label><input id="file-upload" type="file" style="display:none;"  /></div>
+            <div class="buttons"><label for="file-upload" class="custom-file-upload">+ Upload Case Arguments</label><input id="file-upload" type="file" style="display:none;"  /></div>
 
-            <div class="buttons"><label for="file-upload" class="custom-file-upload">+ Upload Reference Material</label><input id="file-upload" type="file" style="display:none;" (change)="getFile($event)" /></div>
+            <div class="buttons"><label for="file-upload" class="custom-file-upload">+ Upload Reference Material</label><input id="file-upload" type="file" style="display:none;"  /></div>
 
         </div>
-        <button class="submit" (click)="uploadFile()" [routerLink]="['/insights']">Submit</button>
+        <button class="submit"  [routerLink]="['/insights']">Submit</button>
     </div>
 </div>
 <!-- </html> -->
