@@ -1,0 +1,17 @@
+table {
+    /* font-family: 'Inter'; */
+    text-align: center;
+    border-spacing: 10px 50px;
+    padding: 4px;
+    width: 100%;
+}
+
+tr {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 22px; /* Adding shadow */
+}
+
+  /* Style for table cells */
+td, th {
+    padding: 10px;
+}

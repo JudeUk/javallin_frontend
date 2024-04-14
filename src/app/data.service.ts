@@ -5,16 +5,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  dataToPass: any;
+  private uploadResponse = new BehaviorSubject<any>(null); // BehaviorSubject to store response
 
-  private similarFilesSource = new BehaviorSubject<any[]>([]);
-
-  similarFiles = this.similarFilesSource.asObservable();
-
-  setSimilarFiles(files:any){
-    this.similarFilesSource.next(files)
+  setUploadResponse(data: any) {
+    this.uploadResponse.next(data);
   }
 
-
-  constructor() { }
+  getUploadResponse() {
+    return this.uploadResponse.asObservable();
+  }
 }

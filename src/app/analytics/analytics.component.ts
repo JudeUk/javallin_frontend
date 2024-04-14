@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidenavComponent } from "../sidenav/sidenav.component";
+import { DataService } from '../data.service';
 
 @Component({
     selector: 'app-analytics',
@@ -8,6 +9,14 @@ import { SidenavComponent } from "../sidenav/sidenav.component";
     styleUrl: './analytics.component.css',
     imports: [SidenavComponent]
 })
-export class AnalyticsComponent {
-
-}
+export class AnalyticsComponent implements OnInit {
+    uploadResponse: any;
+  
+    constructor(private dataService: DataService) { }
+  
+    ngOnInit() {
+      this.dataService.getUploadResponse().subscribe(response => {
+        this.uploadResponse = response;
+      });
+    }
+  }
