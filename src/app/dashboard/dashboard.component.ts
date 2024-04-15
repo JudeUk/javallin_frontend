@@ -4,13 +4,14 @@ import { RouterModule } from '@angular/router';
 import { InsightsComponent } from '../insights/insights.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidenavComponent } from "../sidenav/sidenav.component";
+import { QuerypageComponent } from '../querypage/querypage.component';
 
 @Component({
     selector: 'app-dashboard',
     standalone: true,
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.css',
-    imports: [InsightsComponent, RouterModule, HttpClientModule, SidenavComponent]
+    imports: [InsightsComponent, RouterModule, HttpClientModule, SidenavComponent, QuerypageComponent]
 })
 
 
