@@ -5,6 +5,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
+  setSimilarFiles(response: any) {
+    throw new Error('Method not implemented.');
+  }
   private uploadResponse = new BehaviorSubject<any>(null); // BehaviorSubject to store response
 
   setUploadResponse(data: any) {
