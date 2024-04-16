@@ -1,11 +1,12 @@
 <div class="flex">
+
     <!-- <app-sidenav></app-sidenav> -->
     <app-sidenav></app-sidenav>
-    <div>
+    <div class="ml-72">
         <div class="navbackground">
             <div class="navbar">
                 <div class="logo">
-                    <img src="assets/images/javlogo2.png" width="100%" alt="Logo">
+                    <!-- <img src="/assets/images/logo-1.png" width="100%" alt="Logo"> -->
         
                 </div>
                 <div class="menu">
@@ -18,19 +19,22 @@
         <div class="insight-columns">
             <div class="insight-rows">
                 <div class="insight-card">
-                    <h1>105</h1>
+                    <!-- <ul *ngFor = "let file of similarFiles">
+                        <li>{{file}}</li>
+                    </ul> -->
+                    <h1></h1>
                     <h5>CASES WITH SIMILAR FACTS</h5>
-        
                 </div>
                 <div class="insight-card2">
-                    <h1>50</h1>
+                    <h1>{{ casesWithSimilarFacts }}</h1>
                     <h5>CASES WITH SIMILAR ARGUMENTS USED</h5>
                 </div>
                 <div class="insight-card">
-                    <h1>10</h1>
+                    <h1>{{ casesWhereSucceeded }}</h1>
                     <h5>CASES WHERE IT SUCCEEDED</h5>
                 </div>
             </div>
+
         </div>
         <table>
             <tr>

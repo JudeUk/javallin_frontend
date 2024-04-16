@@ -4,7 +4,17 @@ import { RouterModule } from '@angular/router';
 import { InsightsComponent } from '../insights/insights.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidenavComponent } from "../sidenav/sidenav.component";
+<<<<<<< HEAD
 import { QuerypageComponent } from '../querypage/querypage.component';
+=======
+import { DataService } from "../data.service"
+
+const backend_url_local = 'http://127.0.0.1:8000/upload/'
+
+const backend_url_production_old = 'https://legallens-backend-deployment.onrender.com/upload/'
+
+const backend_url_production = 'https://legal-legal-vkjha.ondigitalocean.app/upload/'
+>>>>>>> d06ab7c335f78f86be4584af75398cda2d118b34
 
 @Component({
     selector: 'app-dashboard',
@@ -15,16 +25,21 @@ import { QuerypageComponent } from '../querypage/querypage.component';
 })
 
 
+
 export class DashboardComponent {
 
-  constructor(private http: HttpClient) {}
+
+  // casesWithSimilarFacts: number = 105;
+  // casesWithSimilarArguments: number = 50;
+  // casesWhereSucceeded: number = 10;
+
+
+  constructor(private http: HttpClient,private dataService: DataService) {}
   caseFile : any;
   formData = new FormData();
-getFile(event: any) {
+  getFile(event: any) {
 
 this.caseFile = event.target.files[0];
-
-console.log('file has been uploaded>>>>>>>',this.caseFile)
 
   
 
@@ -55,13 +70,44 @@ console.log('file has been uploaded>>>>>>>',this.caseFile)
 
   
 
-  uploadFile() {
+//   uploadFile() {
 
-    // const formData = new FormData();
-    // formData.set('file', this.caseFile);
+//     // const formData = new FormData();
+//     // formData.set('file', this.caseFile);
     
-    
-    return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {});
-  }
+//     this.dataService.dataToPass = {
+//       casesWithSimilarFacts: 105,
+//       casesWithSimilarArguments: 50,
+//       casesWhereSucceeded: 10
+//   }
+//     return this.http.post('http://127.0.0.1:8000/upload/', this.formData).subscribe((response) => {});
+
+ 
+
+// }
+
+
+uploadFile() {
+  this.http.post<any>(backend_url_production, this.formData).subscribe(
+    (response) => {
+      // Update dataToPass variables with response data
+      console.log(">>>>>>>>>>>>>> this is the response from backend " + response.case_numbers + response.texts)
+
+      // this.dataService.dataToPass = {
+      //   casesWithSimilarFacts: response.case_numbers,
+      //   casesWithSimilarArguments: response.casesWithSimilarArguments,
+      //   casesWhereSucceeded: response.casesWhereSucceeded
+      // };
+
+      this.dataService.setSimilarFiles(response)
+
+    },
+    (error) => {
+      // Handle error if needed
+      console.error('Error occurred:', error);
+    }
+  );
+}
+
 
 }
