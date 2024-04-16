@@ -1,0 +1,88 @@
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.container {
+    display: flex;
+    /* grid-template-columns: 80%; */
+    flex-direction: column;
+    row-gap: 20px;
+
+}
+
+.container {
+    display: grid;
+    margin: 2em auto 0;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.greeting {
+    padding: 0px 10px;
+    margin: 50px;
+    color: #0E294C;
+    font-size: 40px;
+
+
+}
+
+.menu {
+    padding: 50px;
+    margin: 10px;
+}
+
+
+.heading {
+
+    color: #B7094C;
+    font-size: 30px;
+    padding-bottom: 250px;
+    font: ""
+
+}
+
+.chatbot {
+    background-color: #F6FAFF;
+    margin: auto;
+    border-radius: 20px;
+    min-height: 75vh;
+    max-width: 90vw;
+    align-content: center;
+    padding: 100px;
+
+}
+
+.chatbox {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 10vh;
+    width: 50vw;
+    position: absolute;
+
+}
+
+.chat-container {
+    position: relative;
+    width: 100%;
+}
+
+
+
+
+.button {
+    padding: 0px 20px;
+}

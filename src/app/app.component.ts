@@ -7,7 +7,8 @@ import { RegistrationpageComponent } from "./registrationpage/registrationpage.c
 import { SidenavComponent } from "./sidenav/sidenav.component";
 import { UploadpageComponent } from "./uploadpage/uploadpage.component";
 import { LandingpageComponent } from "./landingpage/landingpage.component";
-import { AnalyticsComponent } from "./analytics/analytics.component";
+import { ChatboxComponent} from './chatbox/chatbox.component';
+import { QuerypageComponent } from './querypage/querypage.component';
 
 
 @Component({
@@ -15,7 +16,11 @@ import { AnalyticsComponent } from "./analytics/analytics.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
+<<<<<<< HEAD
     imports: [CommonModule, RouterOutlet, LoginpageComponent, RegistrationpageComponent, SidenavComponent, UploadpageComponent, LandingpageComponent,  AnalyticsComponent]
+=======
+    imports: [CommonModule, RouterOutlet, DashboardComponent, LoginpageComponent, RegistrationpageComponent, SidenavComponent, UploadpageComponent, LandingpageComponent, ChatboxComponent, QuerypageComponent]
+>>>>>>> 563dfdfcda3a70ece5075c57844092f36ccfbd20
 })
 export class AppComponent {
 
