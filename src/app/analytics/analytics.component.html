@@ -74,50 +74,19 @@
                 <div class="scrollable-content">
                     <table >
                         <div class="">
-                            <tr>
+                            <!-- <tr>
                                 <th>CITATION</th>
                                 <th>CASE TITLE</th>
                                 <th>DATE</th>
                                 <th>COURT LEVEL</th>
-                            </tr>
+                            </tr> -->
                         </div>
-                        <tr>
-                            <td>GLR 523-535</td>
-                            <td>RE AKOTO & 7 OTHERS</td>
-                            <td>5TH DEC 1990</td>
-                            <td>SUPREME COURT</td>
+                        <tr *ngFor="let item of items">
+                            <td>{{ item.case_number }}</td>
+                            <td>{{ item.case_title }}</td>
+                            <td>{{ item.date }}</td>
+                            <td>{{ item.court }}</td>
                         </tr>
-                        <tr>
-                            <td>GLR 523-535</td>
-                            <td>RE AKOTO & 7 OTHERS</td>
-                            <td>5TH DEC 1990</td>
-                            <td>SUPREME COURT</td>
-                        </tr>
-                        <tr>
-                            <td>GLR 523-535</td>
-                            <td>RE AKOTO & 7 OTHERS</td>
-                            <td>5TH DEC 1990</td>
-                            <td>SUPREME COURT</td>
-                        </tr>
-                        <tr>
-                            <td>GLR 523-535</td>
-                            <td>RE AKOTO & 7 OTHERS</td>
-                            <td>5TH DEC 1990</td>
-                            <td>SUPREME COURT</td>
-                        </tr>
-                        <tr>
-                            <td>GLR 523-535</td>
-                            <td>RE AKOTO & 7 OTHERS</td>
-                            <td>5TH DEC 1990</td>
-                            <td>SUPREME COURT</td>
-                        </tr>
-                        <tr>
-                            <td>GLR 523-535</td>
-                            <td>RE AKOTO & 7 OTHERS</td>
-                            <td>5TH DEC 1990</td>
-                            <td>SUPREME COURT</td>
-                        </tr>
-                    
                     </table>
                 </div>
             </div>
