@@ -5,8 +5,9 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SidenavComponent } from "../sidenav/sidenav.component";
 
-import { DataService } from "../data.service"
 import { QuerypageComponent } from '../querypage/querypage.component';
+
+import { DataService } from "../data.service"
 
 const backend_url_local = 'http://127.0.0.1:8000/upload/'
 
