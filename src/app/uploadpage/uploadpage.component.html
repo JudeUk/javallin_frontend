@@ -27,7 +27,7 @@
                     <input type="file"  name="myfile" (change)="onFileSelected($event, 'arguments')" ><br><br>
                     <label for="reference material">Upload Reference Material : </label><br>
                     <input type="file"  name="myfile" id="referenceMaterial" (change)="onFileSelected($event, 'referenceMaterial')"><br><br>
-                    <input type="submit" (click)="uploadFiles()" [routerLink]="['/analytics']" >
+                    <input type="submit" class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold" (click)="uploadFiles()" [routerLink]="['/analytics']" >
                   </form>
                 <!-- <img class="m-2" src="assets/images/fileupload-page-img.png" alt="upload image">
                 <p class="p-4 text-center text-gray-400">

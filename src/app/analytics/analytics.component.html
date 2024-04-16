@@ -1,19 +1,22 @@
-<section class="flex ">
+<section class="flex lg:fixed">
     <div class="w-[260px]">
         <app-sidenav></app-sidenav>
     </div>
-    <div class="flex flex-col w-full px-20 py-10">
+    <div class="flex flex-col w-full pl-36 py-10 ">
         <div class="header flex justify-between">
             <div>
-                <h3>Analytics</h3>
-                <p>serachbox</p>
+                <h3 class="font-semibold text-xl text-primary">Case analytics</h3>
             </div>
-            <div>
-                <p>my profile</p>
+            <div class="flex items-center space-x-2">
+                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
+                  JD
+                </div>
+                <div class="text-sm font-medium">
+                  John Doe
+                </div>
             </div>
         </div>
         <div>
-            <h3 class="text-center">Case analytics</h3>
             <p>{{uploadResponse.message}}</p>
         </div>
         <div class="statistic-cards grid grid-cols-3 gap-4 py-4 text-primary">
@@ -28,7 +31,7 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="text-center text-3xl font-bold">105</h3>
+                    <h3 class="text-center text-3xl font-bold">{{uploadResponse.case_numbers}}</h3>
                     <p class="text-center mx-4 my-2">cases with similar facts</p>
                 </div>
             </div>
@@ -41,7 +44,7 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="text-center text-3xl text-secondary font-bold">30</h3>
+                    <h3 class="text-center text-3xl text-secondary font-bold">{{uploadResponse.case_numbers}}</h3>
                     <p class="text-center mx-4 my-2">Cases with similar arguments</p>
                 </div>
             </div>
@@ -60,59 +63,63 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="text-center text-3xl font-bold">15</h3>
+                    <h3 class="text-center text-3xl font-bold">{{uploadResponse.case_numbers}}</h3>
                     <p class="text-center mx-4 my-2">Cases where it succeded</p>
                 </div>
             </div>
         </div>
-        <div class=" flex justify-around py-4">
-            <div class="">
-                <h3 class="text-center">List of cases</h3>
-                <table>
-                    <tr>
-                        <th>CITATION</th>
-                        <th>CASE TITLE</th>
-                        <th>DATE</th>
-                        <th>COURT LEVEL</th>
-                    </tr>
-                    <tr>
-                        <td>GLR 523-535</td>
-                        <td>RE AKOTO & 7 OTHERS</td>
-                        <td>5TH DEC 1990</td>
-                        <td>SUPREME COURT</td>
-                    </tr>
-                    <tr>
-                        <td>GLR 523-535</td>
-                        <td>RE AKOTO & 7 OTHERS</td>
-                        <td>5TH DEC 1990</td>
-                        <td>SUPREME COURT</td>
-                    </tr>
-                    <tr>
-                        <td>GLR 523-535</td>
-                        <td>RE AKOTO & 7 OTHERS</td>
-                        <td>5TH DEC 1990</td>
-                        <td>SUPREME COURT</td>
-                    </tr>
-                    <tr>
-                        <td>GLR 523-535</td>
-                        <td>RE AKOTO & 7 OTHERS</td>
-                        <td>5TH DEC 1990</td>
-                        <td>SUPREME COURT</td>
-                    </tr>
-                    <tr>
-                        <td>GLR 523-535</td>
-                        <td>RE AKOTO & 7 OTHERS</td>
-                        <td>5TH DEC 1990</td>
-                        <td>SUPREME COURT</td>
-                    </tr>
-                    <tr>
-                        <td>GLR 523-535</td>
-                        <td>RE AKOTO & 7 OTHERS</td>
-                        <td>5TH DEC 1990</td>
-                        <td>SUPREME COURT</td>
-                    </tr>
-                
-                </table>
+        <div class=" flex justify-around py-4 w-full mb-10">
+            <div class="w-full bg-[#F6FAFF]  border-[1px] border-gray-100 p-4 rounded-lg container">
+                <h3 class="text-center font-semibold text-xl text-primary">List of cases</h3>
+                <div class="scrollable-content">
+                    <table >
+                        <div class="fixed-header">
+                            <tr>
+                                <th>CITATION</th>
+                                <th>CASE TITLE</th>
+                                <th>DATE</th>
+                                <th>COURT LEVEL</th>
+                            </tr>
+                        </div>
+                        <tr>
+                            <td>GLR 523-535</td>
+                            <td>RE AKOTO & 7 OTHERS</td>
+                            <td>5TH DEC 1990</td>
+                            <td>SUPREME COURT</td>
+                        </tr>
+                        <tr>
+                            <td>GLR 523-535</td>
+                            <td>RE AKOTO & 7 OTHERS</td>
+                            <td>5TH DEC 1990</td>
+                            <td>SUPREME COURT</td>
+                        </tr>
+                        <tr>
+                            <td>GLR 523-535</td>
+                            <td>RE AKOTO & 7 OTHERS</td>
+                            <td>5TH DEC 1990</td>
+                            <td>SUPREME COURT</td>
+                        </tr>
+                        <tr>
+                            <td>GLR 523-535</td>
+                            <td>RE AKOTO & 7 OTHERS</td>
+                            <td>5TH DEC 1990</td>
+                            <td>SUPREME COURT</td>
+                        </tr>
+                        <tr>
+                            <td>GLR 523-535</td>
+                            <td>RE AKOTO & 7 OTHERS</td>
+                            <td>5TH DEC 1990</td>
+                            <td>SUPREME COURT</td>
+                        </tr>
+                        <tr>
+                            <td>GLR 523-535</td>
+                            <td>RE AKOTO & 7 OTHERS</td>
+                            <td>5TH DEC 1990</td>
+                            <td>SUPREME COURT</td>
+                        </tr>
+                    
+                    </table>
+                </div>
             </div>
         </div>
     </div>
