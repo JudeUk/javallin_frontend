@@ -4,9 +4,9 @@ import { RouterModule } from '@angular/router';
 import { InsightsComponent } from '../insights/insights.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidenavComponent } from "../sidenav/sidenav.component";
-<<<<<<< HEAD
+
 import { QuerypageComponent } from '../querypage/querypage.component';
-=======
+
 import { DataService } from "../data.service"
 
 const backend_url_local = 'http://127.0.0.1:8000/upload/'
@@ -14,7 +14,6 @@ const backend_url_local = 'http://127.0.0.1:8000/upload/'
 const backend_url_production_old = 'https://legallens-backend-deployment.onrender.com/upload/'
 
 const backend_url_production = 'https://legal-legal-vkjha.ondigitalocean.app/upload/'
->>>>>>> d06ab7c335f78f86be4584af75398cda2d118b34
 
 @Component({
     selector: 'app-dashboard',
