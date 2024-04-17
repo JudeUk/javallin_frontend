@@ -1,4 +1,4 @@
-<header class="md:-mb-28 h-24 md:px-16 fixed md:top-0 w-full z-10 {{ isScrolled ? 'bg-[#F6FAFF]' : '' }}">
+<header class="md:-mb-28 h-24 md:px-16 fixed md:top-0 w-full z-10 lg:fixed {{ isScrolled ? 'bg-[#F6FAFF]' : '' }}">
     <nav class="nav flex flex-wrap items-center justify-between ">
         <div class="flex flex-no-shrink py-3 pt-6 -ml-6">
             <img class="h-20" src="assets/images/logo-1.png" alt="">
@@ -29,35 +29,33 @@
                     class="block md:inline-block px-4 py-3 no-underline text-primary hover:text-secondary active:text-secondary active:font-bold">Testimonials</a>
             </li>
             <li class="my-2 md:border-none">
-                <button class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold md:animate-bounce"><a routerLink="/dashboard">Get Started</a></button>
-
-                <!-- <button class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold md:animate-bounce"><a href="https://forms.gle/iLjLPfFSdfP9pnGJ9" target="_blank">Join Waitlist</a></button> -->
+                <button class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold md:animate-bounce"><a [routerLink]="['/signup']">Get started</a></button>
             </li>
 
         </ul>
     </nav>
 </header>
-<div class="md:px-36 ">
+<div class="md:px-36">
     <section id="home" class="px-4 md:pl-0 flex justify-center items-center h-screen">
         <div class="md:basis-1/2 flex flex-col md:mt-10">
             <h1 class="text-3xl md:text-5xl font-bold text-primary">Drowning in legal research?</h1>
-            <p class="py-4 mr-10">
+            <p class="py-4 mr-10 hero-p">
                 LegalLens is your lifeboat! Legal Lens
                 cuts through the noise, empowering you
                 with the information you need quickly
                 and accurately.
             </p>
             <div class="grid justify-center md:justify-start py-4">
-                <button  class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold"><a href="https://forms.gle/iLjLPfFSdfP9pnGJ9">Join Waitlist</a></button>
+                <button  class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold transition hover:ease-in-out duration-300"><a href="https://forms.gle/iLjLPfFSdfP9pnGJ9">Get started</a></button>
             </div>
         </div>
-        <div class="basis-1/2 hidden sm:block">
-            <img src="assets/images/hero-section-img.png" alt="vector image of a gavel">
+        <div class="basis-1/2 hidden sm:block fadeIn-img">
+            <img class="container-img animation" src="assets/images/hero-section-img.png" alt="vector image of a gavel">
         </div>
     </section>
     <section class="flex flex-col items-center mx-auto ">
         <div>
-            <h2 class="text-center text-3xl mb-4 text-secondary font-semibold">Why us</h2>
+            <h2 class="text-center text-3xl mb-4 text-secondary font-semibold animate-bounce">Why us</h2>
             <div class="border-b-4 rounded-full border-primary w-16 mx-auto"></div>
             <p class="py-10 md:mx-32 text-gray-400 text-center">
                 Our AI-powered platform streamlines your
@@ -67,7 +65,7 @@
             </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto p-10">
-            <div class="p-8 h-64 w-72 shadow-lg rounded-3xl">
+            <div class="p-8 h-64 w-72 shadow-lg rounded-3xl hover:duration-300">
                 <div class="mx-auto flex items-center justify-center">
                     <svg class="m-4" width="48" height="48" viewBox="0 0 92 90" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +86,7 @@
                     </svg>
                 </div>
                 <div class="flex flex-col">
-                    <h3 class="font-semibold text-black my-2">Faster and More Precise Findings</h3>
+                    <h3 class="font-semibold text-secondary my-2">Faster and More Precise Findings</h3>
                     <p class="text-gray-400 text-sm">
                         Find relevant legal information quickly and
                         avoid getting bogged down in irrelevant results.
@@ -115,7 +113,7 @@
                     </svg>
                 </div>
                 <div class="flex flex-col">
-                    <h3 class="font-semibold text-black my-2">Improved Case Law Analysis</h3>
+                    <h3 class="font-semibold text-secondary my-2">Improved Case Law Analysis</h3>
                     <p class="text-gray-400 text-sm">
                         Identify critical legal points by
                         leveraging on the power of streamlined legal analysis
@@ -132,7 +130,7 @@
                     </svg>
                 </div>
                 <div class="flex flex-col">
-                    <h3 class="font-semibold text-black my-2">Boosted Efficiency</h3>
+                    <h3 class="font-semibold text-secondary my-2">Boosted Efficiency</h3>
                     <p class="text-gray-400 text-sm">
                         Improve your productivity by spending less time
                         on research and focus more on strategy and case
@@ -144,6 +142,9 @@
         <div>
             <button class="border-2 border-primary text-primary rounded-full px-6 py-2 text-sm font-bold">Learn
                 More</button>
+        </div>
+        <div>
+            
         </div>
     </section>
     <section  class="flex flex-col pt-10">
@@ -171,12 +172,12 @@
             <div class="flex items-center justify-center">
                 <div class="basis-1/2 md:px-16">
                     <div class="py-4">
-                        <h3 class="text-2xl font-semibold py-4 text-secondary">Case Summarization and comparison</h3>
+                        <h3 class="text-2xl font-semibold py-4 text-secondary">Case indexing</h3>
                         <div class="border-b-4 rounded-full border-primary w-16"></div>
                     </div>
                     <p class="text-gray-500">
-                        Automatically generate summaries of key points from legal precedents.
-                        Side-by-side comparison of legal precedents highlighting similarities and differences.
+                        Our semantic search provides results that 
+                        are relevant and specific to your case facts.
                     </p>
                 </div>
                 <div class="basis-1/2 hidden sm:block">
@@ -245,7 +246,7 @@
                 <div class="py-5">
                     <!-- <fa-icon [icon]="faCircleCheck"></fa-icon> -->
                     <p class="text-center">
-                        Sign up with your (active) student id
+                        Sign up with your professional/student email
                     </p>
                     <ul class="px-6 py-2">
                         <li class="py-2"><fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
@@ -253,7 +254,7 @@
                         </li>
                         <li>
                             <fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
-                            Upto 5 searches
+                            Up to 5 searches
                         </li>
                     </ul>
                 </div>
@@ -264,11 +265,11 @@
                 <div class="py-5">
                     <!-- <fa-icon [icon]="faCircleCheck"></fa-icon> -->
                     <p class="text-center">
-                        Sign up with your (active) student id
+                        Sign up with your student email
                     </p>
                     <ul class="px-6 py-2">
                         <li class="py-2"><fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
-                            Upto 3 logins
+                            Up to 3 users per account
                         </li>
                         <li>
                             <fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
@@ -278,16 +279,16 @@
                 </div>
             </div>
             <div class="bg-blue-50 px-8 py-10 rounded-xl">
-                <h3 class="text-2xl text-center text-primary py-5 font-semibold">proffessional plan</h3>
+                <h3 class="text-2xl text-center text-primary py-5 font-semibold">professional plan</h3>
                 <h1 class="text-4xl text-center text-secondary font-bold">$10/month</h1>
                 <div class="py-5">
                     <!-- <fa-icon [icon]="faCircleCheck"></fa-icon> -->
                     <p class="text-center">
-                        Sign up with your personal or organizational id
+                        Sign up with your personal or organizational emails
                     </p>
                     <ul class="px-6 py-2">
                         <li class="py-2"><fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
-                            Upto 3 logins
+                            Up to 3 users per account
                         </li>
                         <li>
                             <fa-icon class="text-primary" [icon]="faCircleCheck"></fa-icon>
@@ -298,7 +299,7 @@
             </div>
         </div>
         <div class="flex items-center justify-center py-8">
-            <button class="border-2 border-primary text-primary rounded-full px-6 py-2 text-sm font-bold"><a href="https://forms.gle/iLjLPfFSdfP9pnGJ9" target="_blank">Join Waitlist</a></button>
+            <button class="border-2 border-primary text-primary rounded-full px-6 py-2 text-sm font-bold"><a href="https://forms.gle/iLjLPfFSdfP9pnGJ9" target="_blank">Get started</a></button>
         </div>
     </section>
 </div>
@@ -319,7 +320,7 @@
                     <li>About Us</li>
                     <li>Pricing</li>
                     <li>Features</li>
-                    <li><a href="https://forms.gle/iLjLPfFSdfP9pnGJ9" target="_blank">Join Waitlist</a></li>
+                    <li><a href="https://forms.gle/iLjLPfFSdfP9pnGJ9" target="_blank">Get startedt</a></li>
                 </ul>
             </div>
         </div>

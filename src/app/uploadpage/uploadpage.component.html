@@ -1,23 +1,45 @@
 
-<div class="">
-    <div class="flex justify-between">
-        <div>
-            <h3 class="font-semibold text-xl text-primary">Upload your case details</h3>
+<div class="flex">
+    <app-sidenav class="w-[260px]"></app-sidenav>
+    <div class="flex flex-col w-full px-24 pt-10">
+        <div class="flex justify-between">
+            <div>
+                <h3 class="font-semibold text-xl text-primary">Upload your case details here</h3>
+            </div>
+            <div class="flex items-center space-x-2">
+                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
+                  JD
+                </div>
+                <div class="text-sm font-medium">
+                  John Doe
+                </div>
+            </div>
         </div>
-        <div>
-            <p>add profile details here</p>
+        <div class="mt-10 flex flex-col">
+            <h1 class="text-center text-3xl font-bold text-secondary">My CaseFiles</h1>
+            <div class="flex flex-col justify-center items-center py-4 mt-5 bg-[#F6FAFF] rounded-lg">
+                <form (submit)="onSubmit($event)">
+                    <label for="facts of case'">Upload facts of Case : </label> <br>
+                    <input type="file" name="myfile" id="factsOfCase" (change)="onFileSelected($event, 'factsOfCase')"><br><br>
+                    <label for="case issues">Upload Case Issues : </label> <br>
+                    <input type="file" name="myfile" id="issues" (change)="onFileSelected($event, 'issues')"><br><br>
+                    <label for="arguments">Upload Case Arguments : </label> <br>
+                    <input type="file"  name="myfile" (change)="onFileSelected($event, 'arguments')" ><br><br>
+                    <label for="reference material">Upload Reference Material : </label><br>
+                    <input type="file"  name="myfile" id="referenceMaterial" (change)="onFileSelected($event, 'referenceMaterial')"><br><br>
+                    <input type="submit" class="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold" (click)="uploadFiles()" [routerLink]="['/analytics']" >
+                  </form>
+                <!-- <img class="m-2" src="assets/images/fileupload-page-img.png" alt="upload image">
+                <p class="p-4 text-center text-gray-400">
+                    Ooops! You have not uploaded  
+                    any case files yet. <br>
+                    Click to upload
+                </p> -->
+                <!-- <button></button> -->
+                <!-- <button (click)="toggleUploadModal()" class="bg-primary text-white rounded-full px-8 py-2 text-sm font-bold">Upload</button> -->
+                <!-- <button class="submit" (click)="uploadFile()" [routerLink]="['/insights']">Submit</button> -->
+            </div>
         </div>
     </div>
-    <div class="mt-10 flex flex-col">
-        <h1 class="text-center text-3xl font-bold text-secondary">My CaseFiles</h1>
-        <div class="flex flex-col justify-center items-center py-4 mt-5 bg-[#F6FAFF] rounded-lg">
-            <img class="m-2" src="assets/images/fileupload-page-img.png" alt="upload image">
-            <p class="p-4 text-center text-gray-400">
-                Ooops! You have not uploaded  
-                any case files yet. <br>
-                Click to upload
-            </p>
-            <a [routerLink]="['dashboard']" class="bg-primary text-white rounded-full px-8 py-2 text-sm font-bold">Upload</a>
-        </div>
-    </div>
+    <!-- <app-dashboard (closeModal)="isUploadModalOpen = false"></app-dashboard> -->
 </div>

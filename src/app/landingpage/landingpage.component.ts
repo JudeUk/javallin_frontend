@@ -4,6 +4,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import { faWallet } from '@fortawesome/free-solid-svg-icons';
 import {faCircleCheck} from '@fortawesome/free-solid-svg-icons';
+import {faCircleArrowDown} from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-landingpage',
@@ -16,6 +18,7 @@ export class LandingpageComponent {
   faRocket = faRocket
   faWallet = faWallet
   faCircleCheck = faCircleCheck
+  faCircleArrowDown = faCircleArrowDown
 
   isScrolled = false;
 
