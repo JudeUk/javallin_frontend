@@ -35,7 +35,7 @@ signInWithGoogle() {
     .then((result) => {
       // User signed in successfully
       const user = result.user;
-      this.router.navigate(['/uploadfiles']);
+      this.router(['/uploadfiles']);
       console.log('Logged in user:', user);
     })
     .catch((error) => {
