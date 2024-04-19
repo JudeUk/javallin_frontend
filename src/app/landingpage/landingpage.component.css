@@ -48,3 +48,74 @@
       top: 0;
     }
   }
+
+  /* animations */
+  .container{
+    animation: expand .8s ease forwards;
+    transition: all .8s ease;
+  }
+
+  /* Animation 2 */
+  /* .fadeIn-img {
+    animation: fadeIn 10s;
+  }
+
+  @keyframes fadeIn {
+    
+  } */
+
+  /* .container-img {
+    /* animation: slideIn 1.5s ease-in-out forwards; */
+    /*animation: slideUp .8s ease-in-out forwards .10s; */
+  /* */
+
+  @keyframes grow {
+    from {
+      transform: scale(0.1);
+    }
+    to {
+      transform: scale(1);  /* Scales the element by 2 */
+    }
+  }
+  
+  .animation {
+    animation: grow 1s;  /* Calls the animation named 'grow' for 5 seconds */
+  }
+
+  .hero-p{
+    transform: translateY(300px);
+    animation: slideUp .8s ease-in-out forwards .10s;
+  }
+
+  h1 {
+    transform: translateY(100px);
+    animation: slideUp .8s ease forwards .10s;
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
