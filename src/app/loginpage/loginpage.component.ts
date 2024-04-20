@@ -6,7 +6,8 @@ import {faEnvelopeOpen} from '@fortawesome/free-solid-svg-icons';
 import {faLockOpen} from '@fortawesome/free-solid-svg-icons';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { environment } from '../../../environment/environment';
+// import { environment } from '../../../environment/environment';
+import { environmentProd } from '../../../environment/environmentProd';
 
 
 @Component({
@@ -20,13 +21,20 @@ export class LoginpageComponent {
 faUser = faUser
 faEnvelopeOpen = faEnvelopeOpen
 faLockOpen = faLockOpen
+// envLocal :any = process.env['FIRE_BASE_CONF'];
+
+
 
 private auth: any;
   router: any;
 
+
+  
 ngOnInit() {
-  const app = initializeApp(environment.firebaseConfig); // Initialize Firebase app
-  this.auth = getAuth(app); // Get Authentication service
+  // const app = initializeApp(environment.firebaseConfig); // Initialize Firebase app
+  const app = initializeApp(environmentProd.firebaseConfigProd); // Initialize Firebase app for Deployment on Prod
+  // this.auth = getAuth(app); // Get Authentication service
+  this.auth = getAuth(app);
 }
 
 signInWithGoogle() {
