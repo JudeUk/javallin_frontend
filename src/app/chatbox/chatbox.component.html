@@ -1,28 +1,37 @@
-<div class="navbar">
-    <div class="greeting">
-        Welcome!
+<section class="flex justify-between">
+    <div>
+        <app-sidenav class="w-3/12"></app-sidenav>
     </div>
-    <div class="menu">
-        <i class="fa fa-bell" style="font-size:24px"></i>
-        My account
-    </div>
-</div>
-
-
-
-
-<div class="chatbot">
-    <div class="heading">
-        <h1>How can i help you today?</h1>
-    </div>
-    <div class="chat-container">
-        <div id="chat-return">
-            <!-- Chat messages will be displayed here -->
+    <div class="w-9/12 fixed ml-80 ">
+        <div class="flex justify-between">
+            <div>
+                <h3 class="font-semibold text-xl text-primary">Upload your case details here</h3>
+            </div>
+            <div class="flex items-center space-x-2">
+                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
+                  JD
+                </div>
+                <div class="text-sm font-medium">
+                  John Doe
+                </div>
+            </div>
         </div>
-        <div id="input-container" class="chatbox">
-            <input style="width: 600px;" type="text" id="user-input" placeholder="What are the facts of your case?">
-            <button id="send-button" class="button">Send</button>
+        <div class="bg-blue-100 p-10 rounded-lg">
+            <div class="heading">
+                <h1>How can i help you today?</h1>
+            </div>
+            <div class=" mb-20 w-full">
+                <div class="chat-history">
+                    <div *ngFor="let message of messages" class="message">
+                      <span class="message-sender">{{ message.sender }}</span>
+                      <span class="message-content">{{ message.content }}</span>
+                    </div>
+                </div>
+                <div id="input-container" class="chatbox w-full">
+                    <input class="w-full focus:outline-none" type="text" id="user-input" [(ngModel)]="userInput" placeholder="What are the facts of your case?">
+                    <button id="send-button" class="button" (click)="sendMessage()">Send</button>
+                </div>
+            </div>
         </div>
     </div>
-
-</div>
+</section>
