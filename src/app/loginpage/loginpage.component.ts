@@ -6,7 +6,7 @@ import {faEnvelopeOpen} from '@fortawesome/free-solid-svg-icons';
 import {faLockOpen} from '@fortawesome/free-solid-svg-icons';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { environment } from '../../../environment/environment';
+import { environment } from '../../environments/environment';
 
 
 @Component({
