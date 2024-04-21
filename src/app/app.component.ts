@@ -10,6 +10,7 @@ import { LandingpageComponent } from "./landingpage/landingpage.component";
 import { ChatboxComponent} from './chatbox/chatbox.component';
 import { QuerypageComponent } from './querypage/querypage.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
+import { SearchComponent } from './search/search.component';
 
 
 @Component({
@@ -17,7 +18,7 @@ import { AnalyticsComponent } from './analytics/analytics.component';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, LoginpageComponent, RegistrationpageComponent, SidenavComponent, UploadpageComponent, LandingpageComponent,  AnalyticsComponent,ChatboxComponent, QuerypageComponent]
+    imports: [CommonModule, RouterOutlet, LoginpageComponent, RegistrationpageComponent, SidenavComponent, UploadpageComponent, LandingpageComponent,  AnalyticsComponent,ChatboxComponent, QuerypageComponent, SearchComponent]
 })
 export class AppComponent {
 

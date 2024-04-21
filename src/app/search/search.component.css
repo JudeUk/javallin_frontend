@@ -1,0 +1,58 @@
+table {
+  /* font-family: 'Inter'; */
+  text-align: center;
+  border-spacing: 10px 50px;
+  padding: 4px;
+  width: 100%;
+}
+
+tr {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+  /* Adding shadow */
+}
+
+/* Style for table cells */
+td,
+th {
+  padding: 10px;
+}
+
+.container {
+  height: 500px;
+  /* Adjust height as needed */
+}
+
+/* .fixed-header {
+    position: fixed;
+    width: 100%;
+  } */
+
+.fixed-header {
+  top: 0;
+}
+
+
+
+.fixed-footer {
+  bottom: 0;
+}
+
+.scrollable-content {
+  height: 280px;
+  overflow-y: auto;
+  /* Adjust other styles as needed (e.g., padding) */
+}
+
+.chat-container {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
