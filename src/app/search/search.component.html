@@ -16,9 +16,10 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div *ngIf="!isLoadingData">
             <p>{{uploadResponse.message}}</p>
         </div>
+        <div *ngIf="isLoadingData"></div>
         <div class="flex">
             <h2 class='font-medium'>Search Ghanaian Case Law & Statutes by Title or ID </h2>
         </div>
@@ -36,7 +37,7 @@
             <div class="w-full bg-[#F6FAFF]  border-[1px] border-gray-100 p-4 rounded-lg container">
                 <h3 class="text-center font-semibold text-xl text-primary">List of cases</h3>
                 <div class="scrollable-content">
-                    <table >
+                    <table *ngIf="!isLoadingData">
                         <div class="">
                             <!-- <tr>
                                 <th>CITATION</th>

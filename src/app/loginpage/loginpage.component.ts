@@ -32,23 +32,23 @@ private auth: any;
   
 ngOnInit() {
   // const app = initializeApp(environment.firebaseConfig); // Initialize Firebase app
-  const app = initializeApp(environmentProd.firebaseConfigProd); // Initialize Firebase app for Deployment on Prod
+  // const app = initializeApp(environmentProd.firebaseConfigProd); // Initialize Firebase app for Deployment on Prod
   // this.auth = getAuth(app); // Get Authentication service
-  this.auth = getAuth(app);
+  // this.auth = getAuth(app);
 }
 
 signInWithGoogle() {
-  const googleProvider = new GoogleAuthProvider();
-  signInWithPopup(this.auth, googleProvider)
-    .then((result) => {
-      // User signed in successfully
-      const user = result.user;
-      this.router(['/uploadfiles']);
-      console.log('Logged in user:', user);
-    })
-    .catch((error) => {
-      console.error('Sign in error:', error);
-    });
+  // const googleProvider = new GoogleAuthProvider();
+  // signInWithPopup(this.auth, googleProvider)
+  //   .then((result) => {
+  //     // User signed in successfully
+  //     const user = result.user;
+  //     this.router(['/uploadfiles']);
+  //     console.log('Logged in user:', user);
+  //   })
+  //   .catch((error) => {
+  //     console.error('Sign in error:', error);
+  //   });
 }
 
 }

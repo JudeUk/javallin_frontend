@@ -1,8 +1,8 @@
 <section class="flex lg:fixed">
-    <div class="w-[260px]">
+    <div class="">
         <app-sidenav></app-sidenav>
     </div>
-    <div class="flex flex-col w-full pl-36 py-10 ">
+    <div class="flex flex-col ml-80 py-10 ">
         <div class="header flex justify-between">
             <div>
                 <h3 class="font-semibold text-xl text-primary">Case analytics</h3>
@@ -21,7 +21,7 @@
         </div>
         <div *ngIf="isLoadingData">Loading analytics data...</div>
         <div class="statistic-cards grid grid-cols-3 gap-4 py-4 text-primary">
-            <div class="bg-[#F6FAFF]  border-[1px] border-gray-100 flex justify-center p-6 rounded-lg shadow-sm w-64">
+            <div class="bg-neutral-200  border-[1px] border-gray-100 flex justify-center p-6 rounded-lg shadow-sm w-64">
                 <div>
                     <svg width="30" height="30" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3359 7.12551V4.26768C11.3359 2.46292 12.9279 1 14.8899 1H25.5579C27.5219 1 29.1139 2.46292 29.1139 4.26768V7.12551" fill="#B7094C"/>
@@ -69,8 +69,8 @@
                 </div>
              </div> -->
         </div>
-        <div class=" flex justify-around py-4 w-full mb-10">
-            <div class="w-full bg-[#F6FAFF]  border-[1px] border-gray-100 p-4 rounded-lg container">
+        <div class=" flex justify-around py-4 w-full mb-20">
+            <div class="w-full bg-neutral-200  border-[1px] border-gray-100 p-4 rounded-lg container">
                 <h3 class="text-center font-semibold text-xl text-primary">List of cases</h3>
                 <div class="scrollable-content">
                     <table *ngIf="!isLoadingData" >
