@@ -8,6 +8,7 @@ import { RegistrationpageComponent } from './registrationpage/registrationpage.c
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { ChatboxComponent } from './chatbox/chatbox.component';
 import { QuerypageComponent } from './querypage/querypage.component';
+import { SearchComponent } from './search/search.component';
 
 
 export const routes: Routes = [
@@ -19,6 +20,7 @@ export const routes: Routes = [
     { path: 'upload', component: UploadpageComponent },
     { path: 'chatbox', component: ChatboxComponent },
     { path: 'querypage', component: QuerypageComponent},
+    { path: 'search', component: SearchComponent},
 ];
 
 
