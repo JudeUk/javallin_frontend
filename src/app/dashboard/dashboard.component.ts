@@ -36,9 +36,10 @@ export class DashboardComponent {
   constructor(private http: HttpClient,private dataService: DataService) {}
   caseFile : any;
   formData = new FormData();
+
   getFile(event: any) {
 
-this.caseFile = event.target.files[0];
+  this.caseFile = event.target.files[0];
 
   
 
@@ -87,10 +88,10 @@ this.caseFile = event.target.files[0];
 
 
 uploadFile() {
-  this.http.post<any>(backend_url_production, this.formData).subscribe(
+  this.http.post<any>(backend_url_local, this.formData).subscribe(
     (response) => {
       // Update dataToPass variables with response data
-      console.log(">>>>>>>>>>>>>> this is the response from backend " + response.case_numbers + response.texts)
+      console.log(">>>>>>>>>>>>>> this is the response from backend " + response.message )
 
       // this.dataService.dataToPass = {
       //   casesWithSimilarFacts: response.case_numbers,
@@ -98,7 +99,10 @@ uploadFile() {
       //   casesWhereSucceeded: response.casesWhereSucceeded
       // };
 
-      this.dataService.setSimilarFiles(response)
+      // this.dataService.setSimilarFiles(response)
+
+      // this.dataService.dataToPass = response.case_numbers
+      // this.dataService.changeNoOfSimilarCasesObserv(response.case_numbers);
 
     },
     (error) => {
