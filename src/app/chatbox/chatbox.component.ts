@@ -29,7 +29,7 @@ export class ChatboxComponent {
       if (this.userInput.trim() !== '') {
         try {
           this.queryLLM(this.userInput).then(response => {
-            this.messages.push({ sender: 'LLM', content: response.message });
+            this.messages.push({ sender: 'LegalLens', content: response.message });
             this.userInput = ''; 
             console.log(response)
           });
