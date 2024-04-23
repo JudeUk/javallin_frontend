@@ -1,3 +1,7 @@
 .rotate-180 {
     transform: rotate(180deg);
   }
+
+  .router-link-active a {
+    font-weight: bold;
+  }

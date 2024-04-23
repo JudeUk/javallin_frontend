@@ -16,9 +16,7 @@ td, th {
     padding: 10px;
 }
 
-.container {
-    height: 500px; /* Adjust height as needed */
-  }
+
   
   /* .fixed-header {
     position: fixed;
@@ -34,7 +32,7 @@ td, th {
   }
   
   .scrollable-content {
-    height: 280px;
+    height: 250px;
     overflow-y: auto;
     /* Adjust other styles as needed (e.g., padding) */
   }

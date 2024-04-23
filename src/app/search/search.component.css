@@ -1,48 +1,11 @@
-table {
-  /* font-family: 'Inter'; */
-  text-align: center;
-  border-spacing: 10px 50px;
-  padding: 4px;
-  width: 100%;
-}
-
-tr {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 22px;
-  /* Adding shadow */
-}
-
-/* Style for table cells */
-td,
-th {
-  padding: 10px;
-}
-
 .container {
   height: 500px;
-  /* Adjust height as needed */
 }
 
 /* .fixed-header {
     position: fixed;
     width: 100%;
   } */
-
-.fixed-header {
-  top: 0;
-}
-
-
-
-.fixed-footer {
-  bottom: 0;
-}
-
-.scrollable-content {
-  height: 280px;
-  overflow-y: auto;
-  /* Adjust other styles as needed (e.g., padding) */
-}
 
 .chat-container {
   position: relative;
@@ -65,3 +28,56 @@ input {
 button {
   margin-top: 10px;
 }
+
+.table-container {
+  overflow-y: auto; /* Enable vertical scroll for the container */
+  height: 300px; /* Adjust height as needed */
+}
+.table-container::-webkit-scrollbar {
+  width: 10px;
+  height: 100px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #0E294C;
+  border-radius: 5px;
+}
+
+.table-container::-webkit-scrollbar-button {
+  display: none; /* Hide scrollbar buttons */
+}
+
+table {
+  width: 100%; 
+  border-collapse: collapse;
+}
+
+/* thead, tbody {
+  display: block;
+} */
+
+thead {
+  position: sticky; /* Fix header to the top */
+  top: 0; /* Adjust position if needed */
+  background-color: white; /* White background for header */
+  z-index: 1; /* Ensure header stays on top during scroll */
+  color: #112D5D;
+}
+
+th, td {
+  /* padding: 10px; */
+  
+  padding: 10px; /* Adjust padding as needed */
+  /* border: 1px solid #ddd; */
+  text-align: center; /* Left alignment as per your preference */
+  width: 25%;
+  
+}
+
+
+tr {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 22px; /* Adding shadow */
+    /* background-color: aliceblue; */
+}
+

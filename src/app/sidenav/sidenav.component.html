@@ -3,14 +3,14 @@
         <img class="h-20" src="assets/images/logo-1.png" alt="">
         <div class="border-b-2 px-2 mx-4"></div>
     </div>
-    <div class="w-full py-6">
+    <div class="w-full pb-6">
+        <a class="px-10 w-full hover:font-bold" [routerLink]="['/search']"><fa-icon class="text-secondary text-2xl px-2" [icon]="faMagnifyingGlass"></fa-icon> Search </a>
+    </div>
+    <div class="w-full pb-6">
         <a class="px-10 w-full hover:font-bold active:font-bold"  routerLink="/chatbox"><fa-icon class="text-secondary text-2xl px-2" [icon]="faComment"></fa-icon> Chat </a>
     </div>
-    <div class="w-full">
+    <div class="w-full pb-6">
         <a class="px-10 w-full hover:font-bold" routerLink="/uploadfiles" ><fa-icon class="text-secondary text-2xl px-2" [icon]="faCloudArrowUp"></fa-icon> Upload files </a>
-    </div>
-    <div class="w-full py-6">
-        <a class="px-10 w-full hover:font-bold" [routerLink]="['/search']"><fa-icon class="text-secondary text-2xl px-2" [icon]="faChartLine"></fa-icon> Analytics </a>
     </div>
     <div class="w-full">
         <a class="px-10 w-full hover:font-bold" routerLink="/" ><fa-icon class="text-secondary text-2xl px-2 rotate-180" [icon]="faRightFromBracket"></fa-icon> LogOut </a>

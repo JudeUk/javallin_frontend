@@ -5,7 +5,7 @@
     <div class="flex flex-col w-full pl-36 py-10 ">
         <div class="header flex justify-between">
             <div>
-                <h3 class="font-semibold text-xl text-primary">Case analytics</h3>
+                <h3 class="font-semibold text-xl text-primary">Search</h3>
             </div>
             <div class="flex items-center space-x-2">
                 <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
@@ -28,32 +28,58 @@
                 <!-- Chat messages will be displayed here -->
             </div>
             <div id="input-container" class="chatbox">
-                <input style="width: 800px;" type="text" id="user-input" placeholder="Type a case title">
+                <input style="width: 800px; " class="focus:outline-none" type="text" id="user-input" placeholder="Type a case title">
                 <button id="send-button" class="button"><svg width="20" height="20" fill="#B7094C" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></button>
             </div>
         </div>
      
-        <div class=" flex justify-around py-4 w-full mb-40">
-            <div class="w-full bg-neutral-200  border-[1px] border-gray-100 p-4 rounded-lg container">
-                <h3 class="text-center font-semibold text-xl text-primary">List of cases</h3>
-                <div class="scrollable-content">
-                    <table *ngIf="!isLoadingData">
-                        <div class="">
-                            <!-- <tr>
-                                <th>CITATION</th>
-                                <th>CASE TITLE</th>
-                                <th>DATE</th>
-                                <th>COURT LEVEL</th>
-                            </tr> -->
-                        </div>
-                        <tr *ngFor="let item of items">
-                            <td>{{ item.case_number }}</td>
-                            <td>{{ item.case_title }}</td>
-                            <td>{{ item.date }}</td>
-                            <td>{{ item.court }}</td>
+        <div class=" flex justify-around py-4 w-full ">
+            <div class="w-full bg-neutral-200  border-[1px] border-gray-100 p-4 rounded-lg">
+                <h3 class="text-center font-semibold text-xl text-secondary">List of cases</h3>
+                <div class="table-container">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th class="">File Index</th>
+                          <th>Title</th>
+                          <th>Date</th>
+                          <th>Court Name</th>
                         </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <td>GLR 523-535</td>
+                          <td>TUFFUOR V ATTORNEY GENERAL</td>
+                          <td>08/09/2023</td>
+                          <td>SUPREME HIGH COURT</td>
+                        </tr>
+                        <tr>
+                            <td>GLR 523-535</td>
+                            <td>TUFFUOR V ATTORNEY GENERAL</td>
+                            <td>08/09/2023</td>
+                            <td>SUPREME HIGH COURT</td>
+                          </tr>
+                          <tr>
+                            <td>GLR 523-535</td>
+                            <td>TUFFUOR V ATTORNEY GENERAL</td>
+                            <td>08/09/2023</td>
+                            <td>SUPREME HIGH COURT</td>
+                          </tr>
+                          <tr>
+                            <td>GLR 523-535</td>
+                            <td>TUFFUOR V ATTORNEY GENERAL</td>
+                            <td>08/09/2023</td>
+                            <td>SUPREME HIGH COURT</td>
+                          </tr>
+                          <tr>
+                            <td>GLR 523-535</td>
+                            <td>TUFFUOR V ATTORNEY GENERAL</td>
+                            <td>08/09/2023</td>
+                            <td>SUPREME HIGH COURT</td>
+                          </tr>
+                      </tbody>
                     </table>
-                </div>
+                  </div>
             </div>
         </div>
     </div>
