@@ -16,20 +16,22 @@
                 </div>
             </div>
         </div>
-        <div class="bg-neutral-200 p-10 rounded-lg pb-28 mr-12">
-            <div class="heading">
-                <h1>How can i help you today?</h1>
-            </div>
-            <div class="h-44 w-full">
-                <div class="chat-history">
-                    <div *ngFor="let message of messages" class="message py-4">
-                      <span>User : {{message.userInput}}</span> <br>
-                      <span class="message-sender font-semibold text-secondary">{{ message.sender }}  :</span> 
-                      <span class="message-content"> {{ message.content }}</span>
+        <div class="bg-neutral-200 p-10 rounded-lg pb-28 mr-12 ">
+            <div class="response-container">
+                <div class="heading">
+                    <h1>How can i help you today?</h1>
+                </div>
+                <div class="h-44 w-full">
+                    <div class="chat-history">
+                        <div *ngFor="let message of messages" class="message py-4">
+                          <span class="font-semibold my-2"><span class=" text-primary">User : </span>{{message.userInput}}</span> <br>
+                          <span class="message-sender font-semibold text-secondary">{{ message.sender }}  :</span> 
+                          <span class="message-content"> {{ message.content }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="input-container" class="chatbox w-11/12 bg-stone-200">
+            <div id="input-container" class="chatbox w-11/12 bg-stone-200 my-4">
                 <input class="w-full focus:outline-none" type="text" id="user-input" [(ngModel)]="userInput" placeholder="What are the facts of your case?">
                 <button id="send-button" class="button" (click)="sendMessage()">Send</button>
             </div>

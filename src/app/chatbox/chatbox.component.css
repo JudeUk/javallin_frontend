@@ -88,3 +88,23 @@
 .button {
     padding: 0px 20px;
 }
+
+.response-container {
+    height: 250px; /* Adjust height as needed */
+    overflow-y: scroll;
+    
+  }
+
+.response-container::-webkit-scrollbar {
+    width: 10px;
+    height: 100px;
+  }
+
+  .response-container::-webkit-scrollbar-thumb {
+    background-color: #0E294C;
+    border-radius: 5px;
+  }
+
+  .response-container::-webkit-scrollbar-button {
+    display: none; /* Hide scrollbar buttons */
+  }
