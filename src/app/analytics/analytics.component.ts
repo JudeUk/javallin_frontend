@@ -24,6 +24,7 @@ export class AnalyticsComponent implements OnInit {
     fetchData(){
       this.dataService.getUploadResponse().subscribe(response => {
         this.uploadResponse = response;
+        console.log(this.uploadResponse)
         this.items = this.uploadResponse.data.slice(1);
         this.isLoadingData = false;
       });

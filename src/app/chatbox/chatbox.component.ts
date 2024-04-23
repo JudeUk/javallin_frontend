@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 interface Message {
   sender: string;
   content: string;
+  userInput : string;
 }
 
 @Component({
@@ -25,17 +26,16 @@ export class ChatboxComponent {
     ngOnInit() { }
   
     sendMessage() {
-        console.log('heeeeey')
       if (this.userInput.trim() !== '') {
         try {
           this.queryLLM(this.userInput).then(response => {
-            this.messages.push({ sender: 'LegalLens', content: response.message });
-            this.userInput = ''; 
-            console.log(response)
+            this.messages.push({ sender: 'LegalLens', content: response.message,userInput:this.userInput}); 
+            this.userInput = '';
+            console.log(this.messages)
           });
         } catch (error) {
           console.error('Error querying LLM:', error);
-          this.messages.push({ sender: 'Error', content: 'There appears to be a problem please type your input again' });
+          this.messages.push({ sender: 'Error', content: 'There appears to be a problem please type your input again',userInput:this.userInput });
         }
       }
     }
@@ -43,7 +43,7 @@ export class ChatboxComponent {
     
     async queryLLM(userInput: string): Promise<any> {
       if (!this.http) { 
-        throw new Error('HttpClient not available for LLM communication');
+        throw new Error('HttpClient not available for legal lens communication');
       }
   
       const llmEndpoint = 'https://legal-legal-vkjha.ondigitalocean.app/chat_constituition/'; 

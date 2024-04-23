@@ -3,7 +3,7 @@
         <app-sidenav class="w-3/12"></app-sidenav>
     </div>
     <div class="w-9/12 fixed ml-80">
-        <div class="flex justify-between my-10">
+        <div class="flex justify-between my-10 mr-12">
             <div>
                 <h3 class="font-semibold text-xl text-primary">Chat with legal lens</h3>
             </div>
@@ -16,21 +16,22 @@
                 </div>
             </div>
         </div>
-        <div class="bg-neutral-200 p-10 rounded-lg">
+        <div class="bg-neutral-200 p-10 rounded-lg pb-28 mr-12">
             <div class="heading">
                 <h1>How can i help you today?</h1>
             </div>
-            <div class=" mb-20 w-full">
+            <div class="h-44 w-full">
                 <div class="chat-history">
-                    <div *ngFor="let message of messages" class="message">
-                      <span class="message-sender">{{ message.sender }}</span> <br>
-                      <span class="message-content">{{ message.content }}</span>
+                    <div *ngFor="let message of messages" class="message py-4">
+                      <span>User : {{message.userInput}}</span> <br>
+                      <span class="message-sender font-semibold text-secondary">{{ message.sender }}  :</span> 
+                      <span class="message-content"> {{ message.content }}</span>
                     </div>
                 </div>
-                <div id="input-container" class="chatbox w-full bg-stone-200">
-                    <input class="w-full focus:outline-none" type="text" id="user-input" [(ngModel)]="userInput" placeholder="What are the facts of your case?">
-                    <button id="send-button" class="button" (click)="sendMessage()">Send</button>
-                </div>
+            </div>
+            <div id="input-container" class="chatbox w-11/12 bg-stone-200">
+                <input class="w-full focus:outline-none" type="text" id="user-input" [(ngModel)]="userInput" placeholder="What are the facts of your case?">
+                <button id="send-button" class="button" (click)="sendMessage()">Send</button>
             </div>
         </div>
     </div>

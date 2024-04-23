@@ -12,6 +12,7 @@ export class DataService {
 
   setUploadResponse(data: any) {
     this.uploadResponse.next(data);
+    console.log('data set')
   }
 
   getUploadResponse() {
