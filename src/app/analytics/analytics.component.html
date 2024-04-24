@@ -1,5 +1,5 @@
 <section class="flex lg:fixed">
-    <div class="">
+    <div class="w-3/12">
         <app-sidenav></app-sidenav>
     </div>
     <div class="w-9/12 fixed ml-80">
@@ -19,7 +19,7 @@
         <div *ngIf="!isLoadingData">
             <p>{{uploadResponse.message}}</p>
         </div>
-        <div *ngIf="isLoadingData">Loading analytics data...</div>
+        <div *ngIf="isLoadingData">No data to display please upload your case details first</div>
         <div class="statistic-cards grid grid-cols-1 gap-4 py-4 text-primary">
             <div class="bg-neutral-200  border-[1px] border-gray-100 flex justify-center p-6 rounded-lg shadow-sm w-64">
                 <div>
