@@ -1,9 +1,9 @@
-<section class="flex">
-    <div class="">
+<section class="flex h-screen">
+    <div class="basis-1/5">
         <app-sidenav></app-sidenav>
     </div>
-    <div class="fixed ml-80">
-        <div class="header flex justify-between py-8 mr-16">
+    <div class="fixed basis-4/5 w-3/4 ml-80 pr-16">
+        <div class="header flex justify-between py-8">
             <div>
                 <h3 class="font-semibold text-xl text-primary">Case analytics</h3>
             </div>
@@ -69,10 +69,13 @@
                 </div>
              </div> -->
         </div>
-        <div class=" flex justify-around py-4 w-full ">
+        <div class=" flex justify-around py-4 w-full">
             <div class="w-full bg-neutral-200  border-[1px] border-gray-100 p-4 rounded-lg container">
                 <h3 class="text-center font-semibold text-xl text-primary">List of cases</h3>
                 <div class="scrollable-content">
+                    <div *ngIf="isLoadingData" class="flex justify-around py-20">
+                        <p>No cases to display yet</p>
+                    </div>
                     <table *ngIf="!isLoadingData" >
                         <div class="">
                             <!-- <tr>
