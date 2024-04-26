@@ -5,7 +5,7 @@
     <div class="fixed ml-80 basis-4/5 w-3/4">
         <div class="flex justify-between my-10 mr-12">
             <div>
-                <h3 class="font-semibold text-xl text-primary">Chat with legal lens</h3>
+                <h3 class="font-semibold text-xl text-primary">Chat with legalLens</h3>
             </div>
             <div class="flex items-center space-x-2">
                 <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-neutral-200 p-10 rounded-lg pb-28 mr-12 ">
+        <div class="bg-neutral-200 p-10 h-[450px] rounded-lg pb-28 mr-12 ">
             <div class="response-container">
                 <div class="heading">
                     <h1>How can i help you today?</h1>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div id="input-container" class="chatbox w-11/12 bg-stone-200 my-4">
+            <div id="input-container" class="chatbox w-full bg-stone-200 my-4">
                 <input class="w-full focus:outline-none" type="text" id="user-input" [(ngModel)]="userInput" placeholder="What are the facts of your case?">
                 <button id="send-button" class="button" (click)="sendMessage()">Send</button>
             </div>
