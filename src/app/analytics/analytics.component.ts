@@ -18,14 +18,16 @@ export class AnalyticsComponent implements OnInit {
     constructor(private dataService: DataService) { }
   
     ngOnInit() {
-
+      this.fetchData()
     }
 
     fetchData(){
       this.dataService.getUploadResponse().subscribe(response => {
         this.uploadResponse = response;
-        console.log(this.uploadResponse)
+        console.log('upload response',this.uploadResponse)
         this.items = this.uploadResponse.data.slice(1);
+        console.log('heeeeeey',this.uploadResponse)
+        // console.log(this.items)
         this.isLoadingData = false;
       });
     }

@@ -44,15 +44,15 @@
                   <div *ngIf="isLoadingData" class="flex justify-around py-20">
                     <p>No cases to display yet please input the <br> case you want to search first</p>
                 </div>
-                <div *ngIf="!isLoadingData">
-                  <h2>Search Results:</h2>
+                <!-- <div *ngIf="!isLoadingData">
                   <ul>
-                    <li *ngFor="let result of searchResults">
-                      {{ result.case_number }}
+                    <li>
+                      <p>heeey</p>
+                      {{searchResults.case_title}} - {{ searchResults.case_number }}
                     </li>
                   </ul>
-                </div>
-                    <!-- <table *ngIf="!isLoadingData">
+                </div> -->
+                    <table *ngIf="!isLoadingData">
                       <thead>
                         <tr>
                           <th class="">File Index</th>
@@ -62,14 +62,14 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr *ngFor="let case of searchResults" class="">
-                          <td>{{case.case_number}}</td>
-                          <td>{{case.case_title}}</td>
-                          <td>{{case.date}}</td>
-                          <td>{{case.court}}</td>
+                        <tr class="">
+                          <td>{{searchResults.case_number}}</td>
+                          <td>{{searchResults.case_title}}</td>
+                          <td>{{searchResults.date}}</td>
+                          <td>{{searchResults.court}}</td>
                         </tr>
                       </tbody>
-                    </table> -->
+                    </table>
                   </div>
             </div>
         </div>

@@ -4,6 +4,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+interface SearchResult {
+  case_number: string; 
+  case_title: string; 
+  court : string
+  date : string;
+}
+
 @Component({
     selector: 'app-search',
     standalone: true,
@@ -15,9 +22,11 @@ export class SearchComponent implements OnInit {
   
 
   searchTitle : string = '';
-  searchResults: any[] = []
+  // searchResults: SearchResult[] = []
+  searchResults: any;
   error: string | null = null;
   isLoadingData: boolean = true;
+
 
   constructor(private http: HttpClient) { }
   ngOnInit() {
