@@ -17,12 +17,14 @@
         </div>
         <div class="mt-10 flex flex-col">
             <div class="flex flex-col items-center py-4 mt-5 bg-neutral-200 rounded-lg">
-                <h3 class="my-4 text-gray-400 text-start text-lg">upload your case details here and lets help you with your research</h3>
+                <h3 class="my-4 text-primary font-semibold text-start text-lg">upload your case details here and lets help you with your research</h3>
                 <form (submit)="onSubmit($event)">
                     <label for="facts of case" class="text-gray-400">upload a file with case details : </label>
                     <input type="file" name="myfile" id="factsOfCase" (change)="onFileSelected($event, 'factsOfCase')"><br>
                     <p class="pb-2 text-center font-semibold text-lg text-secondary">or</p>
-                    <textarea class="p-20 focus:outline-none rounded-lg" name="input_text" id="" placeholder="type case details as text" class="w-full" ></textarea>
+                    <div class="m-10 p-4 rounded-lg bg-white">
+                        <textarea class="p-20 focus:outline-none rounded-lg" name="input_text" id="" placeholder="type case details as text" class="w-full" ></textarea>
+                    </div>
                   </form>
 
                   <button class="bg-primary mx-auto text-center mt-4 text-white rounded-full px-6 py-2 text-sm font-bold" (click)="uploadFiles()" [routerLink]="['/analytics']">submit</button>

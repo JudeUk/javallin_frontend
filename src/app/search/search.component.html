@@ -16,10 +16,6 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="!isLoadingData">
-            <p>{{uploadResponse.message}}</p>
-        </div>
-        <div *ngIf="isLoadingData"></div>
         <div class="flex">
             <h2 class='font-medium'>Search Ghanaian Case Law </h2>
         </div>
@@ -28,8 +24,16 @@
                 <!-- Chat messages will be displayed here -->
             </div>
             <div id="input-container" class="chatbox">
-                <input style="width: 800px; " class="focus:outline-none" type="text" id="user-input" placeholder="Type a case title">
-                <button id="send-button" class="button"><svg width="20" height="20" fill="#B7094C" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></button>
+              <form class="flex justify-between" (ngSubmit)="onSubmit()">
+                <!-- <input type="text" formControlName="caseTitle" placeholder="Enter Case Title">
+                <button type="submit">Search</button> -->
+                <input style="width: 800px; " class="focus:outline-none pt-2" name="searchTitle" type="text" [(ngModel)]="searchTitle" placeholder="Type a case title">
+                <button type="submit"  class="button p-2 mr-8">
+                  <svg width="20" height="20" fill="#B7094C" 
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                </button>
+              </form>
             </div>
         </div>
      
@@ -37,7 +41,18 @@
             <div class="w-full bg-neutral-200  border-[1px] border-gray-100 p-4 rounded-lg">
                 <h3 class="text-center font-semibold text-xl text-secondary">List of cases</h3>
                 <div class="table-container">
-                    <table>
+                  <div *ngIf="isLoadingData" class="flex justify-around py-20">
+                    <p>No cases to display yet please input the <br> case you want to search first</p>
+                </div>
+                <!-- <div *ngIf="!isLoadingData">
+                  <ul>
+                    <li>
+                      <p>heeey</p>
+                      {{searchResults.case_title}} - {{ searchResults.case_number }}
+                    </li>
+                  </ul>
+                </div> -->
+                    <table *ngIf="!isLoadingData">
                       <thead>
                         <tr>
                           <th class="">File Index</th>
@@ -48,35 +63,11 @@
                       </thead>
                       <tbody>
                         <tr class="">
-                          <td>GLR 523-535</td>
-                          <td>TUFFUOR V ATTORNEY GENERAL</td>
-                          <td>08/09/2023</td>
-                          <td>SUPREME HIGH COURT</td>
+                          <td>{{searchResults.case_number}}</td>
+                          <td>{{searchResults.case_title}}</td>
+                          <td>{{searchResults.date}}</td>
+                          <td>{{searchResults.court}}</td>
                         </tr>
-                        <tr>
-                            <td>GLR 523-535</td>
-                            <td>TUFFUOR V ATTORNEY GENERAL</td>
-                            <td>08/09/2023</td>
-                            <td>SUPREME HIGH COURT</td>
-                          </tr>
-                          <tr>
-                            <td>GLR 523-535</td>
-                            <td>TUFFUOR V ATTORNEY GENERAL</td>
-                            <td>08/09/2023</td>
-                            <td>SUPREME HIGH COURT</td>
-                          </tr>
-                          <tr>
-                            <td>GLR 523-535</td>
-                            <td>TUFFUOR V ATTORNEY GENERAL</td>
-                            <td>08/09/2023</td>
-                            <td>SUPREME HIGH COURT</td>
-                          </tr>
-                          <tr>
-                            <td>GLR 523-535</td>
-                            <td>TUFFUOR V ATTORNEY GENERAL</td>
-                            <td>08/09/2023</td>
-                            <td>SUPREME HIGH COURT</td>
-                          </tr>
                       </tbody>
                     </table>
                   </div>

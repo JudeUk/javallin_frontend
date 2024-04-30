@@ -1,32 +1,55 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidenavComponent } from "../sidenav/sidenav.component";
-import { DataService } from '../data.service';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+interface SearchResult {
+  case_number: string; 
+  case_title: string; 
+  court : string
+  date : string;
+}
 
 @Component({
     selector: 'app-search',
     standalone: true,
     templateUrl: './search.component.html',
     styleUrl: './search.component.css',
-    imports: [SidenavComponent, CommonModule]
+    imports: [SidenavComponent, CommonModule,FormsModule]
 })
-export class SearchComponent {
-  uploadResponse: any;
-  items: any[] = [];
+export class SearchComponent implements OnInit {
+  
+
+  searchTitle : string = '';
+  // searchResults: SearchResult[] = []
+  searchResults: any;
+  error: string | null = null;
   isLoadingData: boolean = true;
 
-  constructor(private dataService: DataService) { }
 
+  constructor(private http: HttpClient) { }
   ngOnInit() {
-
   }
 
-  fetchData(){
-    this.dataService.getUploadResponse().subscribe(response => {
-      this.uploadResponse = response;
-      this.items = this.uploadResponse.data.slice(1);
-      this.isLoadingData = false;
-    });
+  onSubmit() {
+    this.onSearch();
+  }
+
+  onSearch() {
+    console.log('heeey')
+    const case_title = this.searchTitle.trim()
+    
+        this.http.post<any[]>('https://legal-legal-vkjha.ondigitalocean.app/case_search/', { case_title: case_title })
+      .subscribe(results => {
+        this.searchResults = results;
+        this.isLoadingData = false;
+      }, error => {
+        this.error = error.message || 'An error occurred during search.'; // Handle error message
+      });
+    this.searchTitle = ''
+    console.log(this.searchResults)
+        
   }
 
 }
