@@ -46,9 +46,9 @@ export class ChatboxComponent {
         throw new Error('HttpClient not available for legal lens communication');
       }
   
-      // const llmEndpoint = 'https://legal-legal-vkjha.ondigitalocean.app/chat_constituition/'; 
+      const llmEndpoint = 'https://legal-legal-vkjha.ondigitalocean.app/chat_constituition/'; 
 
-      const llmEndpoint = 'http://127.0.0.1:8000/chat_constituition/';
+      // const llmEndpoint = 'http://127.0.0.1:8000/chat_constituition/';
       const requestBody = { query: userInput };
       const response = await this.http.post<any>(llmEndpoint, requestBody).toPromise();
       return response
