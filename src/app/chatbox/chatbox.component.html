@@ -30,9 +30,26 @@
                         </div>
                     </div>
                 </div>
+
+                  
+
             </div>
+
+             <!-- Loading Animation -->
+             <div *ngIf="isLoading" class="loading-animation">
+                <div class="loading-text">
+                    <p>Loading...</p>
+                </div>
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+
             <div id="input-container" class="chatbox w-full bg-stone-200 my-4">
-                <input class="w-full focus:outline-none" type="text" id="user-input" [(ngModel)]="userInput" placeholder="What are the facts of your case?">
+                <input class="w-full focus:outline-none" type="text" id="user-input" [(ngModel)]="userInput" placeholder="What are the facts of your case?" (keydown.enter)="sendMessage()">
                 <button id="send-button" class="button" (click)="sendMessage()">Send</button>
             </div>
         </div>

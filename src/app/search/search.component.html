@@ -62,11 +62,11 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr class="">
-                          <td>{{searchResults.case_number}}</td>
-                          <td>{{searchResults.case_title}}</td>
-                          <td>{{searchResults.date}}</td>
-                          <td>{{searchResults.court}}</td>
+                        <tr *ngFor="let result of searchResults">
+                          <td>{{ result.case_number }}</td>
+                          <td>{{ result.case_title }}</td>
+                          <td>{{ result.court }}</td>
+                          <td>{{ result.date }}</td>
                         </tr>
                       </tbody>
                     </table>
