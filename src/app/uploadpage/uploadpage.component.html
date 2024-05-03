@@ -9,9 +9,10 @@
             <div class="flex items-center space-x-2">
                 <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold">
                   J
+                  J
                 </div>
                 <div class="text-sm font-medium">
-                  Janelle
+                  Janelle 
                 </div>
             </div>
         </div>
@@ -20,7 +21,9 @@
                 <h3 class="my-4 text-primary font-semibold text-start text-lg">upload your case details here and lets help you with your research</h3>
                 <form (submit)="onSubmit($event)">
                     <label for="facts of case" class="text-gray-400">upload a file with case details : </label>
-                    <input type="file" name="myfile" id="factsOfCase" (change)="onFileSelected($event, 'factsOfCase')"><br>
+                    <!-- <input type="file" name="myfile" id="factsOfCase" (change)="onFileSelected($event, 'factsOfCase')"><br> -->
+                    <input type="file" name="myfile" id="factsOfCase" (change)="getFile($event)"><br>
+
                     <p class="pb-2 text-center font-semibold text-lg text-secondary">or</p>
                     <div class="m-10 p-4 rounded-lg bg-white">
                         <textarea class="p-20 focus:outline-none rounded-lg" name="input_text" id="" placeholder="type case details as text" class="w-full" ></textarea>
