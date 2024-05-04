@@ -68,8 +68,8 @@ export class UploadpageComponent {
    }
   
    uploadFiles() {
-    const backend_url_local = 'http://127.0.0.1:8000/upload/'
-      this.http.post<any>(backend_url_local, this.formData).subscribe(
+    
+      this.http.post<any>(backend_url_production, this.formData).subscribe(
         (response) => {
           console.log("Response from backend:", response.message);
           this.dataService.setUploadResponse(response);
