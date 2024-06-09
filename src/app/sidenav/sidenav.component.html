@@ -16,16 +16,18 @@
         <a class="px-10 w-full hover:font-bold" routerLink="/" ><fa-icon class="text-secondary text-2xl px-2 rotate-180" [icon]="faRightFromBracket"></fa-icon> LogOut </a>
     </div>
 </div> -->
-<div class="container">
-    <nav class="sidenav" [ngClass]="{'sidenav-open': isNavOpen}">
-      <a href="" class="closebtn" (click)="toggleNav()">&times;</a>
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+<div class="container w-1/5">
+    
+    <nav class="sidenav w-1/5 bg-neutral-100" [ngClass]="{'sidenav-open': isNavOpen}">
+      <button class="closebtn" (click)="toggleNav()">&times;</button>
+      
+      <a class="px-10 w-full hover:font-bold" [routerLink]="['/search']"><fa-icon class="text-secondary text-2xl px-2" [icon]="faMagnifyingGlass"></fa-icon> Search </a>
+      <a class="px-10 w-full hover:font-bold" [routerLink]="['/search']"><fa-icon class="text-secondary text-2xl px-2" [icon]="faMagnifyingGlass"></fa-icon> Search </a>
+      <a class="px-10 w-full hover:font-bold" routerLink="/" ><fa-icon class="text-secondary text-2xl px-2 rotate-180" [icon]="faRightFromBracket"></fa-icon> LogOut </a>
+      
     </nav>
 
     <div class="main">
-      <button class="openbtn" (click)="toggleNav()">☰ Open Sidebar</button>  
+      <button class="openbtn" (click)="toggleNav()">☰</button>  
     </div>
   </div>
