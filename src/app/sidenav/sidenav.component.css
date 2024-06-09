@@ -19,12 +19,11 @@
   
   .sidenav {
     height: 100%;
-    width: 250px;
+    /* width: 250px; */
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
@@ -64,16 +63,17 @@
   }
   
   .openbtn {
+    display: none;
     font-size: 20px;
+    font-weight: bolder;
     cursor: pointer;
-    background-color: #111;
-    color: white;
+    color: #0E294C;
     padding: 10px 15px;
     border: none;
   }
   
   .openbtn:hover {
-    background-color: #444;
+    /* background-color */
   }
   
   .sidenav-open {
@@ -104,6 +104,9 @@
   
     .main-shift {
       margin-left: 0;
+    }
+    .openbtn {
+      display: block;
     }
   }
   
