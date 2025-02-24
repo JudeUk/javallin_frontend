@@ -1,7 +1,9 @@
 <div class="fixed h-screen w-1/5 bg-neutral-100">
     <div class="py-10">
-        <img class="h-20" src="assets/images/logo-1.png" alt="">
-        <div class="border-b-2 px-2 mx-4"></div>
+        <a routerLink="/">
+          <img class="h-20" src="assets/images/logo-1.png" alt="">
+          <div class="border-b-2 px-2 mx-4"></div>
+        </a>
     </div>
     <div class="w-full pb-6">
         <a class="px-10 w-full hover:font-bold" [routerLink]="['/search']"><fa-icon class="text-secondary text-2xl px-2" [icon]="faMagnifyingGlass"></fa-icon> Search </a>
